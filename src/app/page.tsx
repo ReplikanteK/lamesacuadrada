@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const hostings = [
   {
     name: "Hostinger",
@@ -150,17 +152,20 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid sm:grid-cols-3 gap-4">
           {[
-            { title: "Hostinger vs Raiola", desc: "Cara a cara con test de velocidad", slug: "/hostinger-vs-raiola", badge: "Más convierte" },
+            { title: "Hostinger vs Raiola", desc: "Cara a cara con test de velocidad", slug: "/hostinger-vs-raiola", badge: "¡Nuevo!" },
             { title: "Mejor hosting WooCommerce", desc: "Para tiendas 500+ productos", slug: "/hosting-woocommerce", badge: "Próximo" },
             { title: "Hosting WordPress barato", desc: "Por menos de 4€/mes", slug: "/hosting-barato", badge: "Próximo" },
-          ].map((c) => (
-            <div key={c.slug} className="bg-white border border-zinc-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
-              <span className="text-xs font-bold tracking-wide bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full">{c.badge}</span>
-              <div className="font-bold mt-3 text-zinc-900">{c.title}</div>
-              <div className="text-sm font-medium text-zinc-600">{c.desc}</div>
-              <div className="text-xs font-mono text-zinc-400 mt-2">{c.slug}</div>
-            </div>
-          ))}
+          ].map((c) => {
+            const isLive = c.slug === "/hostinger-vs-raiola";
+            return (
+              <Link key={c.slug} href={isLive ? c.slug : "#"} className={`bg-white border border-zinc-200 rounded-2xl p-5 shadow-sm block ${isLive ? "hover:shadow-md hover:border-indigo-200 transition" : "opacity-70"}`}>
+                <span className={`text-xs font-bold tracking-wide px-2.5 py-1 rounded-full ${isLive ? "bg-emerald-500 text-white" : "bg-indigo-50 text-indigo-700"}`}>{c.badge}</span>
+                <div className="font-bold mt-3 text-zinc-900">{c.title} {isLive && "→"}</div>
+                <div className="text-sm font-medium text-zinc-600">{c.desc}</div>
+                <div className="text-xs font-mono text-zinc-400 mt-2">{c.slug}</div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
