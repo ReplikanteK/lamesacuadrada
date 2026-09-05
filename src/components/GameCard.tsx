@@ -9,7 +9,6 @@ export function GameCard({ game }: { game: Game }) {
           : "border-amber-100 hover:border-amber-200 hover:shadow-md transition"
       }`}
     >
-      {/* madera top accent */}
       <div className={`absolute top-0 left-0 right-0 h-1 ${game.highlight ? "bg-gradient-to-r from-amber-500 to-orange-600" : "bg-amber-200"}`} />
       {game.badge && (
         <span
@@ -20,14 +19,26 @@ export function GameCard({ game }: { game: Game }) {
           ● {game.badge}
         </span>
       )}
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-10 h-10 bg-gradient-to-br from-amber-600 to-orange-600 text-white rounded-xl flex items-center justify-center font-black text-sm shadow-sm border border-amber-700/20">
+
+      {/* Portada */}
+      <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-amber-50 border border-amber-100 mb-4 flex items-center justify-center relative">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={game.imageUrl}
+          alt={`Portada ${game.name}`}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="flex items-center gap-3 mb-3">
+        <div className="w-9 h-9 bg-gradient-to-br from-amber-600 to-orange-600 text-white rounded-lg flex items-center justify-center font-black text-xs shadow-sm border border-amber-700/20">
           {game.image}
         </div>
-        <div>
-          <div className="font-extrabold leading-none text-stone-900">{game.name}</div>
-          <div className="text-xs font-medium text-stone-500">
-            {game.publisher} · {game.year} · ★ {game.bggRating}/10
+        <div className="flex-1 min-w-0">
+          <div className="font-black leading-none text-stone-900 truncate">{game.name}</div>
+          <div className="text-xs font-medium text-stone-500 truncate">
+            {game.publisher} · {game.year} · ★ {game.bggRating}
           </div>
         </div>
       </div>
@@ -37,10 +48,10 @@ export function GameCard({ game }: { game: Game }) {
           {game.price}
           <span className="text-xs font-semibold text-stone-500 ml-1">en Amazon</span>
         </div>
-        <div className="text-xs font-medium text-amber-800 mt-1 italic">{game.bestFor}</div>
+        <div className="text-xs font-medium text-amber-800 mt-1 italic line-clamp-2">{game.bestFor}</div>
       </div>
 
-      <ul className="text-sm space-y-2 mb-4 flex-1 border-t border-amber-100 pt-4">
+      <ul className="text-sm space-y-1.5 mb-4 flex-1 border-t border-amber-100 pt-4">
         <li className="flex justify-between">
           <span className="text-stone-500 font-medium">Jugadores</span>
           <span className="font-bold text-stone-900">{game.players}</span>
@@ -60,8 +71,8 @@ export function GameCard({ game }: { game: Game }) {
       </ul>
 
       <div className="text-xs leading-relaxed space-y-1.5 mb-5">
-        <div className="font-semibold text-stone-800">+ {game.pros.join(" • ")}</div>
-        <div className="font-medium text-stone-500">- {game.cons.join(" • ")}</div>
+        <div className="font-semibold text-stone-800 line-clamp-2">+ {game.pros.join(" • ")}</div>
+        <div className="font-medium text-stone-500 line-clamp-2">- {game.cons.join(" • ")}</div>
       </div>
 
       <a
