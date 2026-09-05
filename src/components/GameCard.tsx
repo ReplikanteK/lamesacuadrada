@@ -21,13 +21,13 @@ export function GameCard({ game }: { game: Game }) {
         </span>
       )}
 
-      {/* Portada */}
-      <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-amber-50 border border-amber-100 mb-4 flex items-center justify-center relative">
+      {/* Portada - respeta formato original, sin recorte, idioma ES via Amazon */}
+      <div className="w-full aspect-square rounded-xl overflow-hidden bg-white border border-amber-100 mb-4 flex items-center justify-center relative p-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={game.imageUrl}
-          alt={`Portada ${game.name}`}
-          className="w-full h-full object-cover"
+          alt={`Portada ${game.name} edición española`}
+          className="w-full h-full object-contain"
           loading="lazy"
         />
       </div>

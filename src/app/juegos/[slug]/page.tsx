@@ -47,9 +47,9 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
 
         <div className="grid md:grid-cols-[380px_1fr] gap-8">
           <div className="bg-white rounded-2xl border-2 border-amber-100 p-4 shadow-sm">
-            <div className="aspect-square rounded-xl overflow-hidden bg-amber-50 border border-amber-100">
+            <div className="aspect-square rounded-xl overflow-hidden bg-white border border-amber-100 p-3 flex items-center justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={game.imageUrl} alt={`Portada ${game.name}`} className="w-full h-full object-cover" loading="eager" />
+              <img src={game.imageUrl} alt={`Portada ${game.name} edición española`} className="w-full h-full object-contain" loading="eager" />
             </div>
             <div className="mt-4 space-y-2 text-sm">
               <div className="flex justify-between"><span className="text-stone-500 font-medium">BGG</span><span className="font-black">★ {game.bggRating}/10</span></div>
@@ -135,9 +135,9 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
                 <div className="mt-3 grid sm:grid-cols-3 gap-3">
                   {related.map((r) => (
                     <Link key={r.slug} href={`/juegos/${r.slug}`} className="bg-white border-2 border-amber-100 rounded-2xl p-4 hover:border-amber-300 hover:shadow-md transition">
-                      <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-amber-50 border border-amber-100 mb-3">
+                      <div className="w-full aspect-square rounded-lg overflow-hidden bg-white border border-amber-100 mb-3 p-2 flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={r.imageUrl} alt={r.name} className="w-full h-full object-cover" loading="lazy" />
+                        <img src={r.imageUrl} alt={r.name} className="w-full h-full object-contain" loading="lazy" />
                       </div>
                       <div className="font-black text-sm text-stone-900 truncate">{r.name}</div>
                       <div className="text-xs font-medium text-stone-500">{r.players} · {r.duration} · ★ {r.bggRating}</div>
