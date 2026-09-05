@@ -34,7 +34,7 @@ const hostings = [
     cta: "Ver oferta Raiola",
     href: "#raiola-afiliado",
     highlight: true,
-    pros: ["Precio no sube al renovar", "Soporte teléfono 24/7", "25% cada renovación", "Cookie 90 días"],
+    pros: ["Precio no sube al renovar", "Soporte teléfono 24/7", "Servidores en Galicia"],
     cons: ["Menos almacenamiento"],
   },
   {
