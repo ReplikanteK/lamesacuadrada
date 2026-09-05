@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ComparaHosting - Mejor Hosting WordPress España 2026 | Comparativa Real",
-  description: "Comparativa independiente de hosting WordPress en España 2026: Hostinger vs Raiola vs LucusHost vs Webempresa. Precios reales con IVA, test de velocidad y soporte.",
-  keywords: ["mejor hosting wordpress españa", "hosting wordpress barato", "hostinger vs raiola", "hosting woocommerce"],
+  title: "La Mesa Cuadrada - Mejores Juegos de Mesa 2026 | Comparativas y Ofertas Amazon",
+  description: "Comparativas honestas de juegos de mesa 2026: Catan, Ticket to Ride, Carcassonne y más. Filtra por jugadores, edad y duración. Precios Amazon actualizados y enlaces afiliados transparentes.",
+  keywords: ["mejores juegos de mesa", "juegos de mesa 2 jugadores", "juegos familiares", "catan vs ticket to ride", "juegos de mesa amazon", "la mesa cuadrada"],
   openGraph: {
-    title: "ComparaHosting - Mejor Hosting WordPress España 2026",
-    description: "Comparativa real sin humo: precios, rendimiento y soporte.",
+    title: "La Mesa Cuadrada - Mejores Juegos de Mesa 2026",
+    description: "Comparativas reales sin humo: jugadores, duración, edad y precio. Con enlaces afiliados Amazon transparentes.",
     locale: "es_ES",
     type: "website",
   },

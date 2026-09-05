@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# La Mesa Cuadrada — Juegos de Mesa 2026
 
-## Getting Started
+Comparativas honestas de juegos de mesa con afiliación Amazon transparente. Next.js 16 + Tailwind 4, desplegado en Vercel.
 
-First, run the development server:
+## Stack
+- Next.js 16.3.4 / React 19 / Tailwind 4
+- `src/data/games.ts` — dataset único (8 juegos, BGG + Amazon)
+- `src/components/GameCard.tsx` — card reutilizable
+- Rutas: `/` + `/catan-vs-ticket-to-ride` + `/mejores-2-jugadores`
 
+## Setup
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev # http://localhost:3000
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Afiliados Amazon
+- Tag placeholder: `lamesacuadrada-21` en `src/data/games.ts:12` → reemplazar por tu tag real `tu-tag-21`
+- Disclosure obligatorio en cada card/página (ya incluido)
+- Precios orientativos, final es Amazon.es
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## TODO afiliado
+- [ ] Cambiar TAG en `src/data/games.ts`
+- [ ] Verificar ASINs Amazon.es (links actuales son ejemplo)
+- [ ] Añadir `vercel.json` si necesitas redirects antiguos `/hostinger-vs-raiola` → `/`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+Vercel auto-deploy desde `main` (ReplikanteK/comparahosting). Renombrar proyecto Vercel a `lamesacuadrada` cuando toque. Dominio ideal: `lamesacuadrada.es` / `lamesacuadrada.vercel.app`
