@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Game } from "@/data/games";
 
 export function GameCard({ game }: { game: Game }) {
@@ -31,17 +32,17 @@ export function GameCard({ game }: { game: Game }) {
         />
       </div>
 
-      <div className="flex items-center gap-3 mb-3">
+      <Link href={`/juegos/${game.slug}`} className="flex items-center gap-3 mb-3 hover:opacity-80">
         <div className="w-9 h-9 bg-gradient-to-br from-amber-600 to-orange-600 text-white rounded-lg flex items-center justify-center font-black text-xs shadow-sm border border-amber-700/20">
           {game.image}
         </div>
         <div className="flex-1 min-w-0">
-          <div className="font-black leading-none text-stone-900 truncate">{game.name}</div>
+          <div className="font-black leading-none text-stone-900 truncate hover:text-amber-700">{game.name}</div>
           <div className="text-xs font-medium text-stone-500 truncate">
             {game.publisher} · {game.year} · ★ {game.bggRating}
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className="mb-4">
         <div className="text-2xl font-black tracking-tight text-stone-900">
@@ -87,7 +88,10 @@ export function GameCard({ game }: { game: Game }) {
       >
         Ver en Amazon →
       </a>
-      <p className="text-xs font-medium text-stone-400 text-center mt-2.5">Afiliado · precio sin coste extra</p>
+      <Link href={`/juegos/${game.slug}`} className="text-center w-full mt-2 text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">
+        Ver ficha completa →
+      </Link>
+      <p className="text-xs font-medium text-stone-400 text-center mt-1">Afiliado · precio sin coste extra</p>
     </div>
   );
 }
