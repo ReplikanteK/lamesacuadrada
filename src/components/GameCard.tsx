@@ -5,10 +5,10 @@ import { gameDetails } from "@/data/gameDetails";
 export function GameCard({ game }: { game: Game }) {
   return (
     <div
-      className={`bg-white rounded-2xl border p-6 flex flex-col shadow-sm relative overflow-hidden ${
+      className={`bg-white rounded-2xl border p-6 flex flex-col shadow-sm relative overflow-hidden hover:-translate-y-0.5 ${
         game.highlight
-          ? "border-amber-300 shadow-lg ring-1 ring-amber-100 scale-[1.02]"
-          : "border-amber-100 hover:border-amber-200 hover:shadow-md transition"
+          ? "border-amber-300 shadow-lg ring-1 ring-amber-100 scale-[1.02] hover:shadow-xl"
+          : "border-amber-100 hover:border-amber-200 hover:shadow-md transition-all duration-200"
       }`}
     >
       <div className={`absolute top-0 left-0 right-0 h-1 ${game.highlight ? "bg-gradient-to-r from-amber-500 to-orange-600" : "bg-amber-200"}`} />

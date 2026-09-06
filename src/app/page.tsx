@@ -63,6 +63,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm shadow-sm border border-amber-700/20">◧</div>
             <span className="font-black tracking-tight text-stone-900">lamesacuadrada</span>
             <span className="text-xs font-bold bg-stone-900 text-amber-100 px-2.5 py-1 rounded-full">2026</span>
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-stone-500 ml-2"><span className="w-1 h-1 bg-stone-300 rounded-full" /> dados · fichas · cartas</span>
           </div>
           <nav className="hidden sm:flex gap-6 text-sm font-bold">
             <a href="#comparativa" className="text-stone-600 hover:text-amber-700">Comparativa</a>
@@ -83,8 +84,14 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">2026: comparativa real</span>
           </h1>
           <p className="mt-5 text-[17px] leading-7 text-stone-600 max-w-2xl font-medium">
-            Mismos criterios para todos: jugadores, duración, edad, dificultad BGG y precio Amazon. Sin patrocinios ocultos. Hecho por jugones.
+            Mismos criterios para todos: jugadores, duración, edad, dificultad BGG y precio Amazon. Sin patrocinios ocultos. Hecho alrededor de una mesa — por jugones.
           </p>
+          <div className="mt-4 flex items-center gap-2 text-xs font-bold text-stone-500">
+            <span className="inline-flex items-center gap-1.5 bg-white border border-amber-200 rounded-full px-3 py-1.5">◩ Dados</span>
+            <span className="inline-flex items-center gap-1.5 bg-white border border-amber-200 rounded-full px-3 py-1.5">⬡ Fichas</span>
+            <span className="inline-flex items-center gap-1.5 bg-white border border-amber-200 rounded-full px-3 py-1.5">♤ Cartas</span>
+            <span className="hidden sm:inline text-stone-400 font-medium ml-1">→ mesa, estrategia y reuniones</span>
+          </div>
           <div className="mt-7 flex flex-wrap gap-3">
             <a href="#comparativa" className="bg-amber-600 text-white px-7 py-3.5 rounded-xl text-sm font-black hover:bg-amber-700 shadow-lg shadow-amber-200 transition">
               Ver comparativa →
@@ -93,7 +100,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
               ¿Cuál me conviene?
             </a>
           </div>
-          <p className="mt-4 text-xs font-medium text-stone-500">* Enlaces afiliados Amazon: ganamos comisión sin coste extra para ti. 3-5% aprox.</p>
+          <p className="mt-4 text-xs font-medium text-stone-500">* Enlaces afiliados Amazon: ganamos comisión sin coste extra para ti. 3-5% aprox. · <Link href="/metodologia" className="underline hover:text-amber-700 font-bold">Cómo rankeamos</Link></p>
         </div>
       </section>
 
@@ -245,8 +252,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
 
       <footer className="border-t-2 border-amber-100 bg-white mt-auto">
         <div className="max-w-6xl mx-auto px-6 py-6 text-xs font-medium text-stone-500 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa. · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
-          <span>Afiliados Amazon · Precios Sep 2026 orientativos · {games.length} juegos</span>
+          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa ◧ · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
+          <span>Afiliados Amazon · Precios Sep 2026 orientativos · {games.length} juegos · BGG como fuente</span>
         </div>
       </footer>
       <script
