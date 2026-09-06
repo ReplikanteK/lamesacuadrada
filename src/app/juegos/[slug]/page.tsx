@@ -172,7 +172,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
         </div>
       </footer>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Product", name: game.name, brand: game.publisher, image: game.imageUrl, description: detail.description, aggregateRating: { "@type": "AggregateRating", ratingValue: game.bggRating, bestRating: 10, ratingCount: 1000 }, offers: { "@type": "Offer", price: game.price.replace("€","").replace(",","."), priceCurrency: "EUR", availability: "https://schema.org/InStock", url: game.amazonUrl } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Product", name: game.name, brand: { "@type": "Brand", name: game.publisher }, image: game.imageUrl, description: detail.description, offers: { "@type": "Offer", price: game.price.replace("€","").replace(",","."), priceCurrency: "EUR", availability: "https://schema.org/InStock", url: game.amazonUrl } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: detail.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
     </div>
   );
