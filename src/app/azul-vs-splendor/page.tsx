@@ -52,7 +52,7 @@ export default function AzulVsSplendor() {
           <p className="text-stone-700 leading-7">Azul castiga si te dejan fichas sueltas (-puntos); Splendor premia construir motor eficiente. Azul escala mejor a 2, Splendor a 3-4. Ambos 30 min y se explican en 5 min.</p>
           <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 mt-6">
             <p className="text-sm font-black text-stone-900">Transparencia Amazon</p>
-            <p className="text-sm text-stone-700 mt-1">Ganáis 3-5% sin coste extra. Precio final Amazon.es al pagar.</p>
+            <p className="text-sm text-stone-700 mt-1">Ganamos comisión sin coste extra para ti. Precio final Amazon.es al pagar.</p>
           </div>
         </div>
         <div className="mt-8 flex gap-3">

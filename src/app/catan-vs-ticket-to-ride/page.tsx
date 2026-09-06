@@ -65,7 +65,7 @@ export default function CatanVsTicket() {
           </p>
           <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 mt-6">
             <p className="text-sm font-black text-stone-900">Transparencia afiliados Amazon</p>
-            <p className="text-sm text-stone-700 mt-1 font-medium">Si compras desde aquí ganamos 3-5% sin coste extra. Nos permite mantener comparativas independientes sin patrocinios. Precio final siempre el de Amazon.es al pagar.</p>
+            <p className="text-sm text-stone-700 mt-1 font-medium">Si compras desde aquí ganamos comisión sin coste extra para ti. Nos permite mantener comparativas independientes sin patrocinios. Precio final siempre el de Amazon.es al pagar.</p>
           </div>
         </div>
 

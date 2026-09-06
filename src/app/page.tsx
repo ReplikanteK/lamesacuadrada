@@ -100,7 +100,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
               ¿Cuál me conviene?
             </a>
           </div>
-          <p className="mt-4 text-xs font-medium text-stone-500">* Enlaces afiliados Amazon: ganamos comisión sin coste extra para ti. 3-5% aprox. · <Link href="/metodologia" className="underline hover:text-amber-700 font-bold">Cómo rankeamos</Link></p>
+          <p className="mt-4 text-xs font-medium text-stone-500">* Enlaces afiliados Amazon: ganamos comisión sin coste extra para ti. · <Link href="/metodologia" className="underline hover:text-amber-700 font-bold">Cómo rankeamos</Link></p>
         </div>
       </section>
 
@@ -242,7 +242,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
           {[
             { q: "¿Qué juego de mesa comprar primero?", a: "Catan si sois 3-4, Azul o Ticket to Ride si sois 2. Los 3 se explican en 10 minutos." },
             { q: "¿Cómo funcionan filtros jugadores/duración?", a: "Usa /?jugadores=2&duracion=30 — la URL es compartible y filtra en servidor sin JS." },
-            { q: "¿Ganáis comisión?", a: "Sí, afiliado Amazon (3-5%). A ti no te cuesta más y nos permite mantener comparativas sin patrocinios." },
+            { q: "¿Ganáis comisión?", a: "Sí, afiliado Amazon. A ti no te cuesta más y nos permite mantener comparativas sin patrocinios." },
           ].map((f) => (
             <div key={f.q} className="bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm">
               <div className="font-black text-sm text-stone-900">{f.q}</div>
@@ -267,7 +267,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             mainEntity: [
               { "@type": "Question", name: "¿Qué juego de mesa comprar primero?", acceptedAnswer: { "@type": "Answer", text: "Catan si sois 3-4, Azul o Ticket to Ride si sois 2. Los 3 se explican en 10 minutos." } },
               { "@type": "Question", name: "¿Cómo funcionan filtros jugadores/duración?", acceptedAnswer: { "@type": "Answer", text: "Usa /?jugadores=2&duracion=30 — la URL es compartible y filtra en servidor sin JS." } },
-              { "@type": "Question", name: "¿Ganáis comisión?", acceptedAnswer: { "@type": "Answer", text: "Sí, afiliado Amazon (3-5%). A ti no te cuesta más y nos permite mantener comparativas sin patrocinios." } },
+              { "@type": "Question", name: "¿Ganáis comisión?", acceptedAnswer: { "@type": "Answer", text: "Sí, afiliado Amazon. A ti no te cuesta más y nos permite mantener comparativas sin patrocinios." } },
             ],
           }),
         }}
