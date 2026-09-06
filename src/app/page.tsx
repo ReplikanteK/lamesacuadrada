@@ -2,7 +2,7 @@ import Link from "next/link";
 import { games, parseDurationMinutes } from "@/data/games";
 import { GameCard } from "@/components/GameCard";
 
-type SearchParams = { jugadores?: string; duracion?: string; categoria?: string; q?: string };
+type SearchParams = { jugadores?: string; duracion?: string; categoria?: string; q?: string; ver?: string };
 
 function buildUrl(params: SearchParams, overrides: Partial<SearchParams> & { remove?: (keyof SearchParams)[] }) {
   const next: SearchParams = { ...params, ...overrides };
@@ -38,8 +38,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
     filtered = filtered.filter((g) => g.name.toLowerCase().includes(q) || g.bestFor.toLowerCase().includes(q));
   }
 
+  const verTodos = params.ver === "todos";
   const hasFilters = !!(jugadores || duracion || categoria || params.q);
-  const showing = hasFilters ? filtered : games.slice(0, 9);
+  const showing = hasFilters ? filtered : verTodos ? filtered : games.slice(0, 9);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FFFBEB] text-stone-900 antialiased">
@@ -133,9 +134,15 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
           </div>
         )}
 
-        {!hasFilters && filtered.length > showing.length && (
+        {!hasFilters && !verTodos && filtered.length > showing.length && (
+          <div className="mt-6 text-center flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/?ver=todos#comparativa" className="inline-block bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Ver los 20 juegos →</Link>
+            <Link href="/?categoria=familiar#comparativa" className="inline-block bg-white border-2 border-amber-200 text-stone-900 px-6 py-3 rounded-xl text-sm font-black hover:bg-amber-50">Solo familiares (15) →</Link>
+          </div>
+        )}
+        {verTodos && !hasFilters && (
           <div className="mt-6 text-center">
-            <Link href="/?categoria=familiar#comparativa" className="inline-block bg-white border-2 border-amber-200 text-stone-900 px-6 py-3 rounded-xl text-sm font-black hover:bg-amber-50">Ver los 20 juegos →</Link>
+            <Link href="/#comparativa" className="inline-block bg-white border-2 border-stone-200 text-stone-700 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-50">Ver solo 9 destacados ←</Link>
           </div>
         )}
 
