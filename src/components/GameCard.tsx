@@ -39,7 +39,7 @@ export function GameCard({ game }: { game: Game }) {
         <div className="flex-1 min-w-0">
           <div className="font-black leading-none text-stone-900 truncate hover:text-amber-700">{game.name}</div>
           <div className="text-xs font-medium text-stone-500 truncate">
-            {game.publisher} · {game.year} · ★ {game.bggRating}
+            {game.publisher} · {game.year} · <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-amber-700">★ {game.bggRating} BGG</a>
           </div>
         </div>
       </Link>
@@ -48,6 +48,7 @@ export function GameCard({ game }: { game: Game }) {
         <div className="text-2xl font-black tracking-tight text-stone-900">
           {game.price}
           <span className="text-xs font-semibold text-stone-500 ml-1">en Amazon</span>
+          <span className="text-xs font-medium text-stone-400 ml-1">· Sep 2026 orientativo</span>
         </div>
         <div className="text-xs font-medium text-amber-800 mt-1 italic line-clamp-2">{game.bestFor}</div>
       </div>
@@ -91,7 +92,7 @@ export function GameCard({ game }: { game: Game }) {
       <Link href={`/juegos/${game.slug}`} className="text-center w-full mt-2 text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">
         Ver ficha completa →
       </Link>
-      <p className="text-xs font-medium text-stone-400 text-center mt-1">Afiliado · precio sin coste extra</p>
+      <p className="text-xs font-medium text-stone-400 text-center mt-1">Afiliado · precio sin coste extra · <Link href="/metodologia" className="underline hover:text-stone-600">Metodología</Link></p>
     </div>
   );
 }

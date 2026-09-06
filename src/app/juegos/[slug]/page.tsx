@@ -52,7 +52,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
               <img src={game.imageUrl} alt={`Portada ${game.name} edición española`} className="w-full h-full object-contain" loading="eager" />
             </div>
             <div className="mt-4 space-y-2 text-sm">
-              <div className="flex justify-between"><span className="text-stone-500 font-medium">BGG</span><span className="font-black">★ {game.bggRating}/10</span></div>
+              <div className="flex justify-between"><span className="text-stone-500 font-medium">BGG</span><a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="font-black underline hover:text-amber-700">★ {game.bggRating}/10 → ficha BGG</a></div>
               <div className="flex justify-between"><span className="text-stone-500 font-medium">Año</span><span className="font-bold">{game.year} · {game.publisher}</span></div>
               <div className="flex justify-between"><span className="text-stone-500 font-medium">Jugadores</span><span className="font-bold">{game.players}</span></div>
               <div className="flex justify-between"><span className="text-stone-500 font-medium">Duración</span><span className="font-bold">{game.duration}</span></div>
@@ -62,7 +62,8 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
             <a href={game.amazonUrl} target="_blank" rel="nofollow sponsored" className="mt-5 block text-center w-full py-3.5 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700 shadow-md">
               Ver en Amazon — {game.price} →
             </a>
-            <p className="text-xs font-medium text-stone-400 text-center mt-2">Afiliado · precio sin coste extra · {game.badge || "Top"}</p>
+            <p className="text-xs font-medium text-stone-400 text-center mt-2">Afiliado · precio sin coste extra · Sep 2026 orientativo — <Link href="/metodologia" className="underline hover:text-stone-600">Metodología</Link> · <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-stone-600">BGG {game.bggId}</a></p>
+            <p className="text-xs font-medium text-stone-400 text-center mt-1">Precio final en Amazon puede variar · El ranking no depende del precio</p>
           </div>
 
           <div>
@@ -112,7 +113,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
             <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm">
               <p className="text-xs font-black tracking-wide uppercase text-stone-500">Trivia</p>
               <p className="text-sm font-medium text-stone-700 mt-1">{detail.trivia}</p>
-              <p className="text-xs font-medium text-stone-500 mt-2">BGG ID {game.bggId} · ★ {game.bggRating} · {game.complexity}/5 dificultad</p>
+              <p className="text-xs font-medium text-stone-500 mt-2">BGG ID <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-amber-700">{game.bggId}</a> · ★ {game.bggRating} · {game.complexity}/5 dificultad · <Link href="/metodologia" className="underline hover:text-amber-700">Cómo rankeamos</Link></p>
             </div>
 
             <a href={game.amazonUrl} target="_blank" rel="nofollow sponsored" className="mt-6 block text-center w-full py-3.5 rounded-xl bg-stone-900 text-amber-50 text-sm font-black hover:bg-stone-800">

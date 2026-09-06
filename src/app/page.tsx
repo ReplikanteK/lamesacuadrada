@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { games, parseDurationMinutes } from "@/data/games";
 import { GameCard } from "@/components/GameCard";
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<SearchParams> }): Promise<Metadata> {
+  const params = await searchParams;
+  const hasFilters = !!(params.jugadores || params.duracion || params.categoria || params.q || params.ver);
+  if (hasFilters) {
+    return {
+      alternates: { canonical: "https://lamesacuadrada.vercel.app/" },
+      robots: { index: false, follow: true },
+    };
+  }
+  return {};
+}
 
 type SearchParams = { jugadores?: string; duracion?: string; categoria?: string; q?: string; ver?: string };
 
@@ -232,8 +245,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
 
       <footer className="border-t-2 border-amber-100 bg-white mt-auto">
         <div className="max-w-6xl mx-auto px-6 py-6 text-xs font-medium text-stone-500 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa.</span>
-          <span>Afiliados Amazon • Precios orientativos Amazon.es • {games.length} juegos</span>
+          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa. · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
+          <span>Afiliados Amazon · Precios Sep 2026 orientativos · {games.length} juegos</span>
         </div>
       </footer>
       <script

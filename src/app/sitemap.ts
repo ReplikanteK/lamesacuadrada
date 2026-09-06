@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const pages = [
     "",
+    "/metodologia",
     "/catan-vs-ticket-to-ride",
     "/mejores-2-jugadores",
     "/juegos-fiesta",
