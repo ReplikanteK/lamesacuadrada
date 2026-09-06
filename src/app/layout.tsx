@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "Comparativas honestas de juegos de mesa 2026: Catan, Ticket to Ride, Carcassonne y más. Filtra por jugadores, edad y duración. Precios Amazon Sep 2026 orientativos y enlaces afiliados transparentes.",
   keywords: ["mejores juegos de mesa", "juegos de mesa 2 jugadores", "juegos familiares", "catan vs ticket to ride", "juegos de mesa amazon", "la mesa cuadrada"],
   alternates: { canonical: "/" },
+  verification: { google: "yUsNlp5IMRbnNtHf0zWiZG93D94dGTN4bUlJeKbyk6s" },
   openGraph: {
     title: "La Mesa Cuadrada - Mejores Juegos de Mesa 2026",
     description: "Comparativas reales sin humo: jugadores, duración, edad y precio. Con enlaces afiliados Amazon transparentes.",
