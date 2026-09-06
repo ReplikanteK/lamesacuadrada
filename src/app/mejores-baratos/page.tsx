@@ -20,14 +20,14 @@ export default function MejoresBaratos() {
       <header className="sticky top-0 z-10 bg-[#FFFBEB]/90 backdrop-blur-xl border-b border-amber-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm">◧</div>
+            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm"></div>
             <span className="font-black tracking-tight">lamesacuadrada</span>
           </Link>
           <Link href="/" className="text-sm font-bold text-stone-600 hover:text-amber-700">← Volver</Link>
         </div>
       </header>
       <article className="max-w-6xl mx-auto px-6 py-10 w-full">
-        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-emerald-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm">● Baratos &lt;25€ • Sep 2026</div>
+        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-emerald-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Baratos &lt;25€ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa baratos 2026</h1>
         <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">8 juegos por menos de 25€ que no parecen baratos en mesa. Todos con reglas en 10 min y veredicto honesto. Ordenados por BGG ★.</p>
         <div className="mt-8 grid md:grid-cols-3 gap-5">

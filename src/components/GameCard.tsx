@@ -17,7 +17,7 @@ export function GameCard({ game }: { game: Game }) {
             game.highlight ? "bg-amber-600 text-white" : "bg-stone-800 text-amber-50"
           }`}
         >
-          ● {game.badge}
+          <span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>{game.badge}
         </span>
       )}
 
@@ -34,7 +34,7 @@ export function GameCard({ game }: { game: Game }) {
 
       <Link href={`/juegos/${game.slug}`} className="flex items-center gap-3 mb-3 hover:opacity-80">
         <div className="w-9 h-9 bg-gradient-to-br from-amber-600 to-orange-600 text-white rounded-lg flex items-center justify-center font-black text-xs shadow-sm border border-amber-700/20">
-          {game.image}
+          {game.name.slice(0, 2).toUpperCase()}
         </div>
         <div className="flex-1 min-w-0">
           <div className="font-black leading-none text-stone-900 truncate hover:text-amber-700">{game.name}</div>

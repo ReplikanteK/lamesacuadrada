@@ -16,7 +16,7 @@ export default function CatanVsTicket() {
       <header className="sticky top-0 z-10 bg-[#FFFBEB]/90 backdrop-blur-xl border-b border-amber-200">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm shadow-sm">◧</div>
+            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm shadow-sm"></div>
             <span className="font-black tracking-tight">lamesacuadrada</span>
           </Link>
           <Link href="/" className="text-sm font-bold text-stone-600 hover:text-amber-700">← Volver comparativa</Link>
@@ -25,7 +25,7 @@ export default function CatanVsTicket() {
 
       <article className="max-w-4xl mx-auto px-6 py-10 w-full">
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm">
-          ● Cara a cara • Actualizado Sep 2026
+          <span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Cara a cara • Actualizado Sep 2026
         </div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900">Catan vs Ticket to Ride: ¿cuál comprar primero?</h1>
         <p className="mt-4 text-lg leading-7 text-stone-600 font-medium">

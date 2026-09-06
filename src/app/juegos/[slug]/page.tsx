@@ -33,7 +33,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
       <header className="sticky top-0 z-10 bg-[#FFFBEB]/90 backdrop-blur-xl border-b border-amber-200">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm">◧</div>
+            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm"></div>
             <span className="font-black tracking-tight">lamesacuadrada</span>
           </Link>
           <Link href="/" className="text-sm font-bold text-stone-600 hover:text-amber-700">← Volver</Link>
@@ -68,7 +68,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
 
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full shadow-sm">
-              ● {game.category.join(" · ")} • {game.age}
+              <span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>{game.category.join(" · ")} • {game.age}
             </div>
             <h1 className="text-4xl font-black tracking-tight leading-none mt-3 text-stone-900">{game.name}</h1>
             <p className="text-lg leading-7 text-stone-600 mt-3 font-medium">{detail.intro}</p>

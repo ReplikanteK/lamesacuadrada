@@ -16,14 +16,14 @@ export default function AzulVsSplendor() {
       <header className="sticky top-0 z-10 bg-[#FFFBEB]/90 backdrop-blur-xl border-b border-amber-200">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm">◧</div>
+            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm"></div>
             <span className="font-black tracking-tight">lamesacuadrada</span>
           </Link>
           <Link href="/" className="text-sm font-bold text-stone-600 hover:text-amber-700">← Volver</Link>
         </div>
       </header>
       <article className="max-w-4xl mx-auto px-6 py-10 w-full">
-        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm">● Duelo abstractos • Sep 2026</div>
+        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Duelo abstractos • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900">Azul vs Splendor: ¿cuál comprar?</h1>
         <p className="mt-4 text-lg leading-7 text-stone-600 font-medium">Los dos euros ligeros más elegantes: Azul (mosaicos) vs Splendor (gemas). Mismo peso 1.8, 30 min, 2-4 jugadores. Diferencia: tensión vs motor.</p>
         <div className="mt-8 grid sm:grid-cols-2 gap-4">

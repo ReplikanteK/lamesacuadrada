@@ -60,7 +60,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
       <header className="sticky top-0 z-10 bg-[#FFFBEB]/90 backdrop-blur-xl border-b border-amber-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg font-black text-sm shadow-sm border border-amber-700/20">◧</div>
+            <div className="w-8 h-8 bg-gradient-to-br from-amber-600 to-orange-600 text-white flex items-center justify-center rounded-lg shadow-sm border border-amber-700/20">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="12" rx="1.5" fill="white" fillOpacity="0.95" stroke="white" strokeWidth="1.2" />
+                <path d="M7 16 L6 20 M17 16 L18 20 M7 7 H17" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
+                <rect x="8" y="7" width="8" height="6" rx="0.5" fill="#92400e" fillOpacity="0.15" />
+              </svg>
+            </div>
             <span className="font-black tracking-tight text-stone-900">lamesacuadrada</span>
             <span className="text-xs font-bold bg-stone-900 text-amber-100 px-2.5 py-1 rounded-full">2026</span>
           </div>
@@ -72,8 +78,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         </div>
       </header>
 
-      <section className="bg-gradient-to-b from-amber-100 via-orange-50 to-[#FFFBEB] border-b border-amber-100">
-        <div className="max-w-6xl mx-auto px-6 py-12 sm:py-16">
+      <section className="relative overflow-hidden bg-gradient-to-b from-amber-100 via-orange-50 to-[#FFFBEB] border-b border-amber-100">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2392400e' fill-opacity='0.15'%3E%3Cpath d='M0 0h40v40H0z'/%3E%3Cpath d='M0 40h40v40H0z' opacity='0.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} />
+        <div className="max-w-6xl mx-auto px-6 py-12 sm:py-16 relative">
           <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm">
             <span className="w-2 h-2 bg-amber-200 rounded-full animate-pulse" /> Comparativas honestas — Actualizado Sep 2026
           </div>
@@ -247,7 +254,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
 
       <footer className="border-t-2 border-amber-100 bg-white mt-auto">
         <div className="max-w-6xl mx-auto px-6 py-6 text-xs font-medium text-stone-500 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa ◧ · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
+          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa  · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
           <span>Afiliados Amazon · Precios Sep 2026 orientativos · {games.length} juegos · BGG como fuente</span>
         </div>
       </footer>
