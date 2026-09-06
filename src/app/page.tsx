@@ -135,9 +135,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         )}
 
         {!hasFilters && !verTodos && filtered.length > showing.length && (
-          <div className="mt-6 text-center flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="mt-6 text-center">
             <Link href="/?ver=todos#comparativa" className="inline-block bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Ver los 20 juegos →</Link>
-            <Link href="/?categoria=familiar#comparativa" className="inline-block bg-white border-2 border-amber-200 text-stone-900 px-6 py-3 rounded-xl text-sm font-black hover:bg-amber-50">Solo familiares (15) →</Link>
           </div>
         )}
         {verTodos && !hasFilters && (
