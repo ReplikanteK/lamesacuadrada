@@ -23,7 +23,7 @@ export type Game = {
   category: ("familiar" | "2-jugadores" | "fiesta" | "estrategia" | "cooperativo")[];
 };
 
-const TAG = "lamesacuadrada-21";
+const TAG = "lamesacuadrad-21";
 
 export const games: Game[] = [
   {

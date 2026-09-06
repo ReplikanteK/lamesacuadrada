@@ -49,7 +49,7 @@ export default function Mejores2Jugadores() {
 
         <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
           <p className="text-sm font-black text-stone-900">Metodología</p>
-          <p className="text-sm text-stone-700 mt-1 font-medium">Filtrado por categoría 2-jugadores de nuestro dataset + orden BGG. Precios orientativos Amazon.es con tag afiliado lamesacuadrada-21 (reemplaza por el tuyo en src/data/games.ts:12).</p>
+          <p className="text-sm text-stone-700 mt-1 font-medium">Filtrado por categoría 2-jugadores de nuestro dataset + orden BGG. Precios orientativos Amazon.es con tag afiliado lamesacuadrad-21.</p>
         </div>
 
         <div className="mt-8 flex gap-3">

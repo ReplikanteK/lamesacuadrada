@@ -33,7 +33,7 @@ export default function MejoresFamiliares() {
         </div>
         <div className="mt-8 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
           <p className="text-sm font-black text-stone-900">Metodología</p>
-          <p className="text-sm text-stone-700 mt-1 font-medium">Filtrado categoría familiar + orden BGG. Todos probados para 8+ con reglas en ≤10 min. Precios Amazon.es tag lamesacuadrada-21.</p>
+          <p className="text-sm text-stone-700 mt-1 font-medium">Filtrado categoría familiar + orden BGG. Todos probados para 8+ con reglas en ≤10 min. Precios Amazon.es tag lamesacuadrad-21.</p>
         </div>
         <div className="mt-8 flex gap-3">
           <Link href="/" className="bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Volver a inicio</Link>

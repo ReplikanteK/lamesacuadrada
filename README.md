@@ -16,7 +16,7 @@ npm run build
 ```
 
 ## Afiliados Amazon
-- Tag placeholder: `lamesacuadrada-21` en `src/data/games.ts:12` → reemplazar por tu tag real `tu-tag-21`
+- Tag: `lamesacuadrad-21` en `src/data/games.ts:26` (StoreID oficial)
 - Disclosure obligatorio en cada card/página (ya incluido)
 - Precios orientativos, final es Amazon.es
 
