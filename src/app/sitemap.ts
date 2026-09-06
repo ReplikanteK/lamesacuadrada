@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/juegos-fiesta",
     "/mejores-familiares",
     "/azul-vs-splendor",
+    "/mejores-baratos",
+    "/mejores-ninos",
     ...games.map((g) => `/juegos/${g.slug}`),
   ];
   return pages.map((p) => ({

@@ -193,6 +193,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
           {[
             { title: "Mejores familiares", desc: "Para toda la familia 8+", slug: "/mejores-familiares", badge: "¡Nuevo!" },
             { title: "Azul vs Splendor", desc: "Duelo abstractos elegantes", slug: "/azul-vs-splendor", badge: "¡Nuevo!" },
+            { title: "Mejores baratos <25€", desc: "8 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "¡Nuevo!" },
+            { title: "Mejores para niños 6+", desc: "6-8+ sin aburrir al adulto", slug: "/mejores-ninos", badge: "¡Nuevo!" },
             { title: "Cooperativos Top", desc: "Todos vs el juego", slug: "/juegos-cooperativos", badge: "Próximo" },
           ].map((c) => {
             const isLive = c.slug !== "/juegos-cooperativos";
