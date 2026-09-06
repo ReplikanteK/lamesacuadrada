@@ -74,6 +74,15 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
             <p className="text-lg leading-7 text-stone-600 mt-3 font-medium">{detail.intro}</p>
             <p className="text-stone-700 leading-7 mt-4">{detail.description}</p>
 
+            <div className="mt-6 bg-stone-900 rounded-2xl p-5 relative overflow-hidden border border-stone-800">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 to-orange-600/10" />
+              <div className="relative">
+                <p className="text-xs font-black tracking-wide uppercase text-amber-300">Nuestro veredicto</p>
+                <p className="text-sm leading-6 text-amber-50 mt-1 font-medium">{detail.veredicto}</p>
+                <p className="text-xs font-medium text-stone-400 mt-2">Metodología: BGG + filtros situación → desempate editorial · <Link href="/metodologia" className="underline hover:text-amber-300">Cómo rankeamos</Link></p>
+              </div>
+            </div>
+
             <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5">
               <p className="font-black text-stone-900">◈ Para quién es</p>
               <ul className="mt-2 text-sm list-disc pl-5 space-y-1 font-medium text-stone-700">

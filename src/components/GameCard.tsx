@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Game } from "@/data/games";
+import { gameDetails } from "@/data/gameDetails";
 
 export function GameCard({ game }: { game: Game }) {
   return (
@@ -75,6 +76,9 @@ export function GameCard({ game }: { game: Game }) {
       <div className="text-xs leading-relaxed space-y-1.5 mb-5">
         <div className="font-semibold text-stone-800 line-clamp-2">+ {game.pros.join(" • ")}</div>
         <div className="font-medium text-stone-500 line-clamp-2">- {game.cons.join(" • ")}</div>
+        {gameDetails[game.slug]?.veredicto && (
+          <div className="font-medium text-stone-600 line-clamp-2 italic border-t border-amber-100 pt-2 mt-2">“{gameDetails[game.slug].veredicto}”</div>
+        )}
       </div>
 
       <a
