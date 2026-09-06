@@ -166,10 +166,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         )}
 
         <div className="mt-6 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm">
-          <p className="font-black text-stone-900">◈ Veredicto rápido</p>
+          <p className="font-black text-stone-900">◈ Veredicto rápido · <Link href="/metodologia" className="text-xs font-bold text-amber-700 underline hover:text-amber-800">Cómo decidimos</Link></p>
           <p className="text-sm leading-6 text-stone-600 mt-1 font-medium">
-            <span className="font-black text-stone-900">Para empezar:</span> Catan. <span className="font-black text-stone-900">Para pareja:</span> 7 Wonders Duel o Azul.{" "}
-            <span className="font-black text-stone-900">Fiesta 6+:</span> Dixit / Codenames. <span className="font-black text-stone-900">Cooperativo:</span> Pandemic / Just One.
+            <span className="font-black text-stone-900">Para empezar:</span> <Link href="/juegos/catan" className="underline hover:text-amber-700">Catan</Link>. <span className="font-black text-stone-900">Para pareja:</span> <Link href="/juegos/7-wonders-duel" className="underline hover:text-amber-700">7 Wonders Duel</Link> o <Link href="/juegos/azul" className="underline hover:text-amber-700">Azul</Link>.{" "}
+            <span className="font-black text-stone-900">Fiesta 6+:</span> <Link href="/juegos/dixit" className="underline hover:text-amber-700">Dixit</Link> / <Link href="/juegos/codenames" className="underline hover:text-amber-700">Codenames</Link>. <span className="font-black text-stone-900">Cooperativo:</span> <Link href="/juegos/pandemic" className="underline hover:text-amber-700">Pandemic</Link> / <Link href="/juegos/just-one" className="underline hover:text-amber-700">Just One</Link>.
           </p>
         </div>
       </section>

@@ -13,9 +13,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const game = getGameBySlug(slug);
   if (!game) return {};
   const detail = gameDetails[slug];
+  const title = `${game.name} — Reseña, cómo jugar y oferta Amazon 2026 | La Mesa Cuadrada`;
+  const description = detail
+    ? `${detail.intro.slice(0, 145).trimEnd()}... · ${game.players} jugadores · ${game.duration} · ${game.age} · ${game.price} Amazon.`
+    : `Reseña ${game.name} ${game.year} — ${game.players} jugadores, ${game.duration}. Precio Amazon.`;
+  const ogImage = game.imageUrl;
   return {
-    title: `${game.name} — Reseña, cómo jugar y oferta Amazon 2026 | La Mesa Cuadrada`,
-    description: detail ? `${detail.intro.slice(0, 150)} Jugadores ${game.players}, ${game.duration}, ${game.age}. Precio ${game.price} Amazon.` : `Reseña ${game.name} ${game.year} — ${game.players} jugadores, ${game.duration}. Precio Amazon.`,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [{ url: ogImage, alt: `Portada ${game.name} edición española` }],
+      locale: "es_ES",
+      type: "article",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+      images: [ogImage],
+    },
   };
 }
 
