@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics";
+
 type AmazonClickPayload = {
   slug: string;
   asin: string;
@@ -20,23 +22,8 @@ export function trackAmazonClick({
 }: AmazonClickPayload) {
   const payload = { slug, asin: asin || "", price, location, page };
   try {
-    // Vercel Web Analytics (cookieless) if present
-    const va = (window as unknown as { va?: (event: string, data: unknown) => void }).va;
-    if (typeof va === "function") {
-      // va track is non-blocking
-      va("event", { name: "amazon_click", data: payload });
-    }
-    // GA4 fallback if present (also non-blocking via gtag)
-    const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
-    if (typeof gtag === "function") {
-      gtag("event", "amazon_click", payload);
-    }
-    // Beacon fallback for future custom endpoint — never blocks navigation
-    if (navigator.sendBeacon) {
-      const blob = new Blob([JSON.stringify({ ...payload, ts: Date.now() })], { type: "application/json" });
-      // fire-and-forget, ignore result
-      navigator.sendBeacon("/api/track", blob);
-    }
+    // Official Vercel track — queues if script not yet loaded, never blocks navigation
+    track("amazon_click", payload);
   } catch {
     // never throw — navigation must not be blocked
   }
