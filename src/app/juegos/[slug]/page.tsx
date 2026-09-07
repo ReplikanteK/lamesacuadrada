@@ -113,11 +113,13 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
             </div>
 
             <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5">
-              <p className="font-black text-stone-900">◈ Para quién es</p>
+              <p className="font-black text-stone-900">¿Es {game.name} para ti?</p>
+              <p className="text-xs font-bold tracking-wide uppercase text-amber-800 mt-1">Decisión en 30 segundos — datos + criterio editorial</p>
+              <p className="font-black text-emerald-800 mt-4 text-sm">Compra si...</p>
               <ul className="mt-2 text-sm list-disc pl-5 space-y-1 font-medium text-stone-700">
                 {detail.idealFor.map((x) => <li key={x}>{x}</li>)}
               </ul>
-              <p className="font-black text-stone-900 mt-4">No es para ti si</p>
+              <p className="font-black text-red-800 mt-4 text-sm">No compres si...</p>
               <ul className="mt-2 text-sm list-disc pl-5 space-y-1 font-medium text-stone-600">
                 {detail.notIdealFor.map((x) => <li key={x}>{x}</li>)}
               </ul>

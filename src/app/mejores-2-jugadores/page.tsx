@@ -38,6 +38,19 @@ export default function Mejores2Jugadores() {
           No todos los juegos rinden a 2. Aquí solo los que funcionan de verdad en pareja, ordenados por nota BGG y filtrados por duración. Todos con enlace Amazon afiliado transparente.
         </p>
 
+        <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
+          <p className="font-black text-stone-900">Elige según lo que buscas</p>
+          <p className="text-xs font-bold tracking-wide uppercase text-amber-700 mt-1">Estas recomendaciones son criterio editorial; no sustituyen el ranking BGG</p>
+          <div className="mt-3 grid sm:grid-cols-2 gap-2 text-sm font-medium">
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎯 Diseñado específicamente para 2</span> — <Link href="/juegos/7-wonders-duel" className="underline text-amber-700">7 Wonders Duel</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">⚡ Partida rápida</span> — <Link href="/juegos/azul" className="underline text-amber-700">Azul</Link> / <Link href="/juegos/splendor" className="underline text-amber-700">Splendor</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🧠 Máxima profundidad</span> — <Link href="/juegos/brass-birmingham" className="underline text-amber-700">Brass: Birmingham</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🌱 Más relajado</span> — <Link href="/juegos/cascadia" className="underline text-amber-700">Cascadia</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🤝 Cooperativo</span> — <Link href="/juegos/pandemic" className="underline text-amber-700">Pandemic</Link></div>
+          </div>
+          <p className="text-xs font-medium text-stone-500 mt-3">Debajo: ranking por valoración BGG. Las etiquetas usan jugadores/duración/categoría + criterio editorial.</p>
+        </div>
+
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {twoP.map((g) => (
             <GameCard key={g.slug} game={g} />
@@ -45,7 +58,7 @@ export default function Mejores2Jugadores() {
         </div>
 
         <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm max-w-4xl">
-          <p className="font-black text-stone-900">◈ ¿Cuál elijo?</p>
+          <p className="font-black text-stone-900">◈ ¿Cuál elijo? <span className="text-xs font-bold text-stone-500">— resumen rápido</span></p>
           <p className="text-sm leading-6 text-stone-600 mt-1 font-medium">
             <span className="font-black text-stone-900">Solo pareja jugona:</span> 7 Wonders Duel (8.1 BGG, solo 2p).{" "}
             <span className="font-black text-stone-900">Pareja + ocasional 3-4:</span> Azul o Ticket to Ride.{" "}
