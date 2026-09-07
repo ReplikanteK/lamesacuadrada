@@ -211,16 +211,6 @@ export const gameDetails: Record<string, GameDetail> = {
     trivia: "#1 BGG desde 2020. Diseñado por Gavan Brown/Matt Tolman reimplementando Brass original de Martin Wallace.",
     faq: [{ q: "¿Birmingham o Lancashire?", a: "Birmingham más pulido y cerveza como recurso; Lancashire más agreste clásico." }],
   },
-  "spirit-island": {
-    intro: "Defiende isla de colonos siendo espíritu. Coop más desafiante BGG, 0% azar complaciente.",
-    description: "Spirit Island invierte colonización: eres espíritu que aterroriza invasores. Cada espíritu es asimétrico total — 8 muy distintos. Gestionas miedo, destrucción y crecimiento. Cooperativo duro donde planear 3 turnos ahead es obligatorio. 90-120 min, 1-4 con solo excelente.",
-    howToPlay: ["Fase espíritu: crece, gana energía, juega cartas pagando energía", "Invasores expanden, construyen y arrasan según mazo", "Genera miedo y destruye ciudades; victoria si controlas isla"],
-    idealFor: ["Cooperativo experto hardcore", "Grupo que quiere puzzle sin azar"],
-    notIdealFor: ["Familia casual o <60 min"],
-    veredicto: "Isla que no perdona. Te da asimetría y profundidad extrema; te pide 2h y tolerancia a perder mucho al inicio.",
-    trivia: "Top 10 BGG cooperativo desde 2018. Expansión Jagged Earth añade 10 espíritus.",
-    faq: [{ q: "¿Spirit o Pandemic?", a: "Pandemic iniciación 45 min; Spirit experto 120 min sin alpha." }],
-  },
   "mansions-madness": {
     intro: "Investigación Lovecraft con app. 1-5, 2-3h de misterio, terror y puzzles.",
     description: "Mansiones 2ª Ed es coop narrativo con app que genera mapa, puzzles y monstruos. Investigas, resuelves acertijos y combates. App obligatoria — sin ella no se juega. Producción top, miniaturas y losetas. 120-180 min, 14+, campaña 4 escenarios base + DLC.",
