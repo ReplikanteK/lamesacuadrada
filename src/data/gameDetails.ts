@@ -176,7 +176,7 @@ export const gameDetails: Record<string, GameDetail> = {
     description: "Just One es fiesta cooperativo: uno adivina, el resto escribe 1 palabra pista sin repetir. Las duplicadas se eliminan antes de mostrar. Adivina 13 palabras y ganas. La magia es arriesgar pista original vs segura.",
     howToPlay: ["Adivinador cierra ojos; resto escribe 1 palabra pista para palabra objetivo", "Elimina pistas idénticas", "Adivinador ve pistas restantes y dice 1 palabra; si acierta 1 punto"],
     idealFor: ["Fiesta 4-7 cooperativo sin discusión", "Grupo que ama palabras sin espía"],
-    notIdealFor: ["2-3 jugadores (necesita 4+)"],
+    notIdealFor: ["2 jugadores (no compatible) — a 3 funciona pero pierde gracia, recomendado 4+"],
     veredicto: "Un coro que se auto-sabotea: todas escriben una pista y las iguales se borran. Si sois 4-7 hay risa sin alfa; si sois 2, el coro no afina.",
     trivia: "Spiel des Jahres 2019. 110 cartas x5 palabras = 550 palabras base, rejugable infinito.",
     faq: [{ q: "¿Just One o Codenames?", a: "Just One cooperativo rápido sin equipos; Codenames competitivo con espía." }],

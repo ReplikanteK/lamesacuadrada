@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const game = getGameBySlug(slug);
   if (!game) return {};
   const detail = gameDetails[slug];
-  const title = `${game.name} — Reseña, cómo jugar y oferta Amazon 2026 | La Mesa Cuadrada`;
+  const title = `${game.name} — Ficha y análisis, cómo jugar y oferta Amazon 2026 | La Mesa Cuadrada`;
   const description = detail
     ? `${truncateAtWord(detail.intro, 145)}... · ${game.players} jugadores · ${game.duration} · ${game.age} · ${game.price} Amazon.`
-    : `Reseña ${game.name} ${game.year} — ${game.players} jugadores, ${game.duration}. Precio Amazon.`;
+    : `Ficha y análisis ${game.name} ${game.year} — ${game.players} jugadores, ${game.duration}. Precio Amazon.`;
   const ogImage = game.imageUrl;
   const canonical = `https://lamesacuadrada.vercel.app/juegos/${slug}`;
   return {

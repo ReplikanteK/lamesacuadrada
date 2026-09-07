@@ -59,7 +59,7 @@ export default function Metodologia() {
           <div className="bg-white border-2 border-amber-200 rounded-2xl p-6 shadow-sm">
             <div className="w-8 h-8 bg-stone-900 text-amber-50 rounded-full flex items-center justify-center font-black text-sm">6</div>
             <h2 className="font-black mt-3">Afiliación transparente</h2>
-            <p className="text-sm leading-6 text-stone-600 mt-1 font-medium">Enlaces Amazon llevan tag <span className="font-mono text-xs bg-amber-50 px-1.5 py-0.5 rounded">lamesacuadrad-21</span>. Si compras, nos llevamos comisión sin coste extra para ti. Lo indicamos en cada card y ficha con <em>“Afiliado · precio sin coste extra”</em> y cumplimos Operating Agreement de Amazon Associates + normativa española de publicidad. <a href="https://afiliados.amazon.es/help/node/topic/GRXPHT8U84RAYDXZ" target="_blank" rel="noopener" className="underline text-amber-700">Tabla oficial</a>.</p>
+            <p className="text-sm leading-6 text-stone-600 mt-1 font-medium">En calidad de Afiliado de Amazon, obtenemos ingresos por las compras adscritas que cumplen los requisitos aplicables. Enlaces Amazon llevan tag <span className="font-mono text-xs bg-amber-50 px-1.5 py-0.5 rounded">lamesacuadrad-21</span>. Si compras a través de ellos no pagas más. Identificamos claramente nuestra relación de afiliación y los enlaces comerciales en cada card y ficha con <em>“Afiliado · precio sin coste extra”</em>. <a href="https://afiliados.amazon.es/help/node/topic/GRXPHT8U84RAYDXZ" target="_blank" rel="noopener" className="underline text-amber-700">Programa de Afiliados Amazon</a>.</p>
           </div>
         </div>
 
