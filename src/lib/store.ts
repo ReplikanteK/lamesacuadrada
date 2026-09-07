@@ -1,8 +1,9 @@
 import { put } from "@vercel/blob";
+import { randomUUID } from "crypto";
 
 export type ClickEvent = {
   event: "amazon_click";
-  timestamp: string;
+  timestamp: string; // server-generated ISO
   slug: string;
   asin: string;
   price: string;
@@ -16,8 +17,11 @@ export async function saveClick(data: ClickEvent): Promise<void> {
     console.warn("[store] BLOB_READ_WRITE_TOKEN missing — click not persisted", data);
     return;
   }
-  const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-  const key = `amazon-clicks/${data.timestamp.replace(/[:.]/g, "-")}-${id}.json`;
+  // Key generada exclusivamente en servidor: no usa ningún campo del cliente
+  // Formato: amazon-clicks/YYYY-MM-DDTHH-mm-ss-mmmZ-<uuid>.json
+  const iso = new Date().toISOString().replace(/[:.]/g, "-");
+  const id = randomUUID();
+  const key = `amazon-clicks/${iso}-${id}.json`;
   await put(key, JSON.stringify(data), {
     access: "private",
     contentType: "application/json",
