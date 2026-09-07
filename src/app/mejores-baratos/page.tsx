@@ -6,6 +6,12 @@ import { GameCard } from "@/components/GameCard";
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa baratos 2026 (<25€) | La Mesa Cuadrada",
   description: "8 juegos baratos 2026 por <25€: Dobble, Codenames, Kingdomino, Just One, Exploding Kittens y más. Comparativa real con BGG, precio Amazon y veredicto.",
+  alternates: { canonical: "https://lamesacuadrada.vercel.app/mejores-baratos" },
+  openGraph: {
+    title: "Mejores juegos de mesa baratos 2026 (<25€) | La Mesa Cuadrada",
+    description: "8 juegos baratos 2026 por <25€: Dobble, Codenames, Kingdomino, Just One, Exploding Kittens.",
+    url: "https://lamesacuadrada.vercel.app/mejores-baratos",
+  },
 };
 
 function parsePrice(price: string): number {

@@ -18,7 +18,7 @@ export const gameDetails: Record<string, GameDetail> = {
     idealFor: ["Grupo 3-4 que quiere negociar y reírse", "Familia con niños 10+ que ya domina Monopoly"],
     notIdealFor: ["Pareja (a 2 pierde la negociación)", "Quien odia el azar de dados"],
     veredicto: "No es el más justo, es el que más anécdotas deja. Si tu mesa disfruta regateando una oveja como si fuera oro, aquí hay noches para años; si el dado te saca de quicio, hay mesas más nobles.",
-    trivia: "Más de 40 millones de copias vendidas. Base para decenas de expansiones (Navegantes, Ciudades y Caballeros).",
+    trivia: "Más de 45 millones de copias vendidas (CATAN GmbH, 2025). Base para decenas de expansiones (Navegantes, Ciudades y Caballeros).",
     faq: [{ q: "¿Catan a 2 jugadores?", a: "Existe variante oficial pero flojea — mejor Catan Duel o Ticket to Ride para pareja." }, { q: "¿Cuánto dura realmente?", a: "60 min con jugones, 90 con familia que negocia mucho." }],
   },
   "ticket-to-ride": {
@@ -28,7 +28,7 @@ export const gameDetails: Record<string, GameDetail> = {
     idealFor: ["Pareja que quiere competir sin pelear mucho", "Familia 8+ que busca visual bonito"],
     notIdealFor: ["Quien busca estrategia dura sin azar"],
     veredicto: "Una partida de sonrisas y puñaladas con billete: te deja bloquear sin gritar y puntuar sin contar. Si buscas mapa bonito que no se rompe a 2, este; si quieres euro sin azar, no es tu tren.",
-    trivia: "Spiel des Jahres 2004. Versión Europa añade túneles (riesgo extra) y estaciones (salva rutas bloqueadas).",
+    trivia: "Ticket to Ride ganó Spiel des Jahres 2004; Ticket to Ride: Europe (2005) añadió túneles, estaciones y recibió International Gamers Award 2005.",
     faq: [{ q: "¿Europa o USA?", a: "Europa para 2-3 jugadores y más táctica; USA para 4-5 y más bloqueo directo." }],
   },
   carcassonne: {

@@ -6,10 +6,16 @@ import { GameCard } from "@/components/GameCard";
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa para fiestas 6+ jugadores 2026 | La Mesa Cuadrada",
   description: "Ranking juegos fiesta 6-8 jugadores 2026: Dixit, Codenames, Dobble, Just One, Sushi Go Party. 15 min, sin explicación y risas. Precios Amazon.",
+  alternates: { canonical: "https://lamesacuadrada.vercel.app/juegos-fiesta" },
+  openGraph: {
+    title: "Mejores juegos de mesa para fiestas 6+ jugadores 2026 | La Mesa Cuadrada",
+    description: "Ranking juegos fiesta 6-8 jugadores 2026: Dixit, Codenames, Dobble, Just One, Sushi Go Party.",
+    url: "https://lamesacuadrada.vercel.app/juegos-fiesta",
+  },
 };
 
 export default function JuegosFiesta() {
-  const fiesta = games.filter((g) => g.category.includes("fiesta") || g.maxPlayers >= 6).sort((a, b) => b.maxPlayers - a.maxPlayers);
+  const fiesta = games.filter((g) => g.maxPlayers >= 6).sort((a, b) => b.maxPlayers - a.maxPlayers);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FFFBEB] text-stone-900 antialiased">

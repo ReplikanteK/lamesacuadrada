@@ -4,6 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Metodología — Cómo elaboramos nuestros rankings | La Mesa Cuadrada",
   description: "Cómo elaboramos nuestros rankings: criterio BGG como base objetiva, filtros por jugadores/duración/edad, desempate editorial, precio no influye, precios orientativos Sep 2026 y afiliación Amazon transparente.",
+  alternates: { canonical: "https://lamesacuadrada.vercel.app/metodologia" },
+  openGraph: {
+    title: "Metodología — Cómo elaboramos nuestros rankings | La Mesa Cuadrada",
+    description: "Cómo elaboramos nuestros rankings: criterio BGG como base objetiva, filtros por jugadores/duración/edad, desempate editorial.",
+    url: "https://lamesacuadrada.vercel.app/metodologia",
+  },
 };
 
 export default function Metodologia() {
@@ -59,7 +65,7 @@ export default function Metodologia() {
 
         <div className="mt-8 bg-amber-50 border-2 border-amber-200 rounded-2xl p-6">
           <p className="font-black">¿Por qué BGG y no una nota propia 9/10?</p>
-          <p className="text-sm leading-6 text-stone-700 mt-1 font-medium">Inventar un 8/10 sin haber jugado 100 partidas es humo y Google lo penaliza (E-E-A-T). BGG es auditable por cualquiera. Nuestra aportación editorial no es una nota, es <strong>para quién / no para quién / veredicto</strong> en cada ficha — eso sí podemos defender.</p>
+          <p className="text-sm leading-6 text-stone-700 mt-1 font-medium">Preferimos no inventar una puntuación propia que sugiera una experiencia de juego que no podemos demostrar. Utilizamos BGG como referencia externa y reservamos nuestra aportación para el criterio editorial: <strong>para quién / no para quién / veredicto</strong> en cada ficha — eso sí podemos defender.</p>
         </div>
 
         <div className="mt-6 bg-white border-2 border-amber-100 rounded-2xl p-5">

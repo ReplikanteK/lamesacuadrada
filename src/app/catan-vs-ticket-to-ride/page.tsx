@@ -5,6 +5,12 @@ import { games } from "@/data/games";
 export const metadata: Metadata = {
   title: "Catan vs Ticket to Ride 2026: ¿Cuál comprar primero? | La Mesa Cuadrada",
   description: "Catan vs Ticket to Ride Europa 2026: jugadores, duración, complejidad y precio Amazon. Comparativa real para familias y parejas. ¿Cuál es mejor puerta de entrada?",
+  alternates: { canonical: "https://lamesacuadrada.vercel.app/catan-vs-ticket-to-ride" },
+  openGraph: {
+    title: "Catan vs Ticket to Ride 2026: ¿Cuál comprar primero? | La Mesa Cuadrada",
+    description: "Catan vs Ticket to Ride Europa 2026: comparativa real para familias y parejas.",
+    url: "https://lamesacuadrada.vercel.app/catan-vs-ticket-to-ride",
+  },
 };
 
 export default function CatanVsTicket() {

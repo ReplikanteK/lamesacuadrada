@@ -6,6 +6,12 @@ import { GameCard } from "@/components/GameCard";
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa para 2 jugadores 2026 | La Mesa Cuadrada",
   description: "Ranking real de juegos para 2 jugadores 2026: 7 Wonders Duel, Azul, Carcassonne, Ticket to Ride. Comparativa por duración, complejidad y precio Amazon.",
+  alternates: { canonical: "https://lamesacuadrada.vercel.app/mejores-2-jugadores" },
+  openGraph: {
+    title: "Mejores juegos de mesa para 2 jugadores 2026 | La Mesa Cuadrada",
+    description: "Ranking real de juegos para 2 jugadores 2026: 7 Wonders Duel, Azul, Carcassonne, Ticket to Ride.",
+    url: "https://lamesacuadrada.vercel.app/mejores-2-jugadores",
+  },
 };
 
 export default function Mejores2Jugadores() {

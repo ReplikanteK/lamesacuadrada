@@ -8,6 +8,13 @@ export async function generateStaticParams() {
   return games.map((g) => ({ slug: g.slug }));
 }
 
+function truncateAtWord(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const sliced = text.slice(0, max);
+  const lastSpace = sliced.lastIndexOf(" ");
+  return (lastSpace > 40 ? sliced.slice(0, lastSpace) : sliced).trimEnd();
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const game = getGameBySlug(slug);
@@ -15,18 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const detail = gameDetails[slug];
   const title = `${game.name} — Reseña, cómo jugar y oferta Amazon 2026 | La Mesa Cuadrada`;
   const description = detail
-    ? `${detail.intro.slice(0, 145).trimEnd()}... · ${game.players} jugadores · ${game.duration} · ${game.age} · ${game.price} Amazon.`
+    ? `${truncateAtWord(detail.intro, 145)}... · ${game.players} jugadores · ${game.duration} · ${game.age} · ${game.price} Amazon.`
     : `Reseña ${game.name} ${game.year} — ${game.players} jugadores, ${game.duration}. Precio Amazon.`;
   const ogImage = game.imageUrl;
+  const canonical = `https://lamesacuadrada.vercel.app/juegos/${slug}`;
   return {
     title,
     description,
+    alternates: { canonical },
     openGraph: {
       title,
       description,
       images: [{ url: ogImage, alt: `Portada ${game.name} edición española` }],
       locale: "es_ES",
       type: "article",
+      url: canonical,
     },
     twitter: {
       card: "summary",

@@ -5,6 +5,12 @@ import { games } from "@/data/games";
 export const metadata: Metadata = {
   title: "Azul vs Splendor 2026: ¿Cuál es mejor abstracto? | La Mesa Cuadrada",
   description: "Azul vs Splendor 2026: dos abstractos elegantes 30 min, 1.8 complejidad. Comparativa real por precio, rejugabilidad y mejor para pareja/familia.",
+  alternates: { canonical: "https://lamesacuadrada.vercel.app/azul-vs-splendor" },
+  openGraph: {
+    title: "Azul vs Splendor 2026: ¿Cuál es mejor abstracto? | La Mesa Cuadrada",
+    description: "Azul vs Splendor 2026: comparativa real por precio y rejugabilidad.",
+    url: "https://lamesacuadrada.vercel.app/azul-vs-splendor",
+  },
 };
 
 export default function AzulVsSplendor() {

@@ -12,7 +12,9 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       robots: { index: false, follow: true },
     };
   }
-  return {};
+  return {
+    alternates: { canonical: "https://lamesacuadrada.vercel.app/" },
+  };
 }
 
 type SearchParams = { jugadores?: string; duracion?: string; categoria?: string; q?: string; ver?: string };
@@ -90,7 +92,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">2026: comparativa real</span>
           </h1>
           <p className="mt-5 text-[17px] leading-7 text-stone-600 max-w-2xl font-medium">
-            Mismos criterios para todos: jugadores, duración, edad, dificultad BGG y precio Amazon. Sin patrocinios ocultos. Hecho por jugones.
+            Mismos criterios para todos: jugadores, duración, edad, dificultad BGG y precio Amazon. Sin patrocinios ocultos. Datos verificables · Criterio editorial.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a href="#comparativa" className="bg-amber-600 text-white px-7 py-3.5 rounded-xl text-sm font-black hover:bg-amber-700 shadow-lg shadow-amber-200 transition">
@@ -202,20 +204,27 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             { title: "Azul vs Splendor", desc: "Duelo abstractos elegantes", slug: "/azul-vs-splendor", badge: "¡Nuevo!" },
             { title: "Mejores baratos <25€", desc: "8 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "¡Nuevo!" },
             { title: "Mejores para niños 6+", desc: "6-8+ sin aburrir al adulto", slug: "/mejores-ninos", badge: "¡Nuevo!" },
-            { title: "Cooperativos Top", desc: "Todos vs el juego", slug: "/juegos-cooperativos", badge: "Próximo" },
+            { title: "Cooperativos Top", desc: "Todos vs el juego", slug: "/juegos-cooperativos", badge: "Próximamente" },
           ].map((c) => {
             const isLive = c.slug !== "/juegos-cooperativos";
-            return (
+            return isLive ? (
               <Link
                 key={c.slug}
-                href={isLive ? c.slug : "#"}
-                className={`bg-white border-2 rounded-2xl p-5 shadow-sm block ${isLive ? "hover:shadow-md hover:border-amber-300 border-amber-100 transition" : "opacity-70 border-amber-100"}`}
+                href={c.slug}
+                className="bg-white border-2 rounded-2xl p-5 shadow-sm block hover:shadow-md hover:border-amber-300 border-amber-100 transition"
               >
-                <span className={`text-xs font-black tracking-wide px-2.5 py-1 rounded-full ${isLive ? "bg-emerald-600 text-white" : "bg-stone-100 text-stone-600"}`}>{c.badge}</span>
-                <div className="font-black mt-3 text-stone-900">{c.title} {isLive && "→"}</div>
+                <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-emerald-600 text-white">{c.badge}</span>
+                <div className="font-black mt-3 text-stone-900">{c.title} →</div>
                 <div className="text-sm font-medium text-stone-600">{c.desc}</div>
                 <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
               </Link>
+            ) : (
+              <div key={c.slug} className="bg-white border-2 rounded-2xl p-5 shadow-sm block opacity-70 border-amber-100">
+                <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-stone-100 text-stone-600">{c.badge}</span>
+                <div className="font-black mt-3 text-stone-900">{c.title}</div>
+                <div className="text-sm font-medium text-stone-600">{c.desc}</div>
+                <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
+              </div>
             );
           })}
         </div>
@@ -254,7 +263,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
 
       <footer className="border-t-2 border-amber-100 bg-white mt-auto">
         <div className="max-w-6xl mx-auto px-6 py-6 text-xs font-medium text-stone-500 flex flex-col sm:flex-row justify-between gap-2">
-          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Hecho alrededor de una mesa  · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
+          <span>© 2026 lamesacuadrada — Independiente. No patrocinado. Datos verificables · Criterio editorial · <Link href="/metodologia" className="underline hover:text-amber-700">Metodología</Link></span>
           <span>Afiliados Amazon · Precios Sep 2026 orientativos · {games.length} juegos · BGG como fuente</span>
         </div>
       </footer>
