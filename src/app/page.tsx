@@ -131,6 +131,14 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             <Link href="/catan-vs-ticket-to-ride" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Catan vs TTR →</Link>
             <span className="text-stone-300">·</span>
             <Link href="/juegos-fiesta" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Fiesta 6+ →</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/mejores-familiares" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Familiares →</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/azul-vs-splendor" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Azul vs Splendor →</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/mejores-baratos" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Baratos &lt;25€ →</Link>
+            <span className="text-stone-300">·</span>
+            <Link href="/mejores-ninos" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Para niños →</Link>
           </div>
         </div>
       </section>

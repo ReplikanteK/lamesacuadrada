@@ -96,8 +96,8 @@ export function GameCard({ game }: { game: Game }) {
       >
         Ver en Amazon →
       </AmazonLink>
-      <Link href={`/juegos/${game.slug}`} className="text-center w-full mt-2 text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">
-        Ver ficha completa →
+      <Link href={`/juegos/${game.slug}`} aria-label={`Ficha de ${game.name} — reseña y precio`} className="text-center w-full mt-2 text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">
+        Ficha de {game.name} →
       </Link>
       <p className="text-xs font-medium text-stone-400 text-center mt-1">Afiliado · precio sin coste extra · <Link href="/metodologia" className="underline hover:text-stone-600">Metodología</Link></p>
     </div>

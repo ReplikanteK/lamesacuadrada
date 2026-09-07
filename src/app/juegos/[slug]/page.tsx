@@ -168,6 +168,15 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
               ))}
             </div>
 
+            <nav aria-label="Guías relacionadas" className="mt-6 flex flex-wrap gap-2 text-xs font-bold items-center bg-amber-50/70 border border-amber-100 rounded-2xl p-3">
+              <span className="text-stone-600 font-black mr-1">Más guías:</span>
+              <Link href="/mejores-2-jugadores" className="bg-white border border-amber-200 px-3 py-1.5 rounded-full hover:bg-amber-50">2 jugadores →</Link>
+              <Link href="/juegos-fiesta" className="bg-white border border-amber-200 px-3 py-1.5 rounded-full hover:bg-amber-50">Fiesta →</Link>
+              <Link href="/mejores-baratos" className="bg-white border border-amber-200 px-3 py-1.5 rounded-full hover:bg-amber-50">Baratos &lt;25€ →</Link>
+              <Link href="/mejores-ninos" className="bg-white border border-amber-200 px-3 py-1.5 rounded-full hover:bg-amber-50">Niños →</Link>
+              <Link href="/azul-vs-splendor" className="bg-white border border-amber-200 px-3 py-1.5 rounded-full hover:bg-amber-50">Azul vs Splendor →</Link>
+            </nav>
+
             {related.length > 0 && (
               <div className="mt-10">
                 <h3 className="font-black text-stone-900">También te puede interesar</h3>
