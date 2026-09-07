@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGameBySlug } from "@/data/games";
 import { gameDetails } from "@/data/gameDetails";
+import { AmazonLink } from "@/components/AmazonLink";
 
 export async function generateStaticParams() {
   return games.map((g) => ({ slug: g.slug }));
@@ -87,9 +88,9 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
               <div className="flex justify-between"><span className="text-stone-500 font-medium">Edad</span><span className="font-bold">{game.age}</span></div>
               <div className="flex justify-between"><span className="text-stone-500 font-medium">Dificultad</span><span className="font-bold">{game.complexity}/5</span></div>
             </div>
-            <a href={game.amazonUrl} target="_blank" rel="nofollow sponsored" className="mt-5 block text-center w-full py-3.5 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700 shadow-md">
+            <AmazonLink href={game.amazonUrl} slug={game.slug} price={game.price} location="ficha" page={`/juegos/${game.slug}`} className="mt-5 block text-center w-full py-3.5 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700 shadow-md">
               Ver en Amazon — {game.price} →
-            </a>
+            </AmazonLink>
             <p className="text-xs font-medium text-stone-400 text-center mt-2">Afiliado · precio sin coste extra · Sep 2026 orientativo — <Link href="/metodologia" className="underline hover:text-stone-600">Metodología</Link> · <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-stone-600">BGG {game.bggId}</a></p>
             <p className="text-xs font-medium text-stone-400 text-center mt-1">Precio final en Amazon puede variar · El ranking no depende del precio</p>
           </div>
@@ -153,9 +154,9 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
               <p className="text-xs font-medium text-stone-500 mt-2">BGG ID <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-amber-700">{game.bggId}</a> · ★ {game.bggRating} · {game.complexity}/5 dificultad · <Link href="/metodologia" className="underline hover:text-amber-700">Cómo rankeamos</Link></p>
             </div>
 
-            <a href={game.amazonUrl} target="_blank" rel="nofollow sponsored" className="mt-6 block text-center w-full py-3.5 rounded-xl bg-stone-900 text-amber-50 text-sm font-black hover:bg-stone-800">
+            <AmazonLink href={game.amazonUrl} slug={game.slug} price={game.price} location="ficha" page={`/juegos/${game.slug}`} className="mt-6 block text-center w-full py-3.5 rounded-xl bg-stone-900 text-amber-50 text-sm font-black hover:bg-stone-800">
               Comprar {game.name} en Amazon →
-            </a>
+            </AmazonLink>
 
             <h3 className="font-black text-stone-900 mt-8">Preguntas frecuentes</h3>
             <div className="mt-3 space-y-3">

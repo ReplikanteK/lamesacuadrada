@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Game } from "@/data/games";
+import { AmazonLink } from "./AmazonLink";
 
 export function GameCard({ game }: { game: Game }) {
+  const pathname = usePathname() || "/";
   return (
     <div
       className={`bg-white rounded-2xl border p-6 flex flex-col shadow-sm relative overflow-hidden hover:-translate-y-0.5 ${
@@ -77,18 +82,20 @@ export function GameCard({ game }: { game: Game }) {
         <div className="font-medium text-stone-500 line-clamp-2">- {game.cons.join(" • ")}</div>
       </div>
 
-      <a
+      <AmazonLink
         href={game.amazonUrl}
-        target="_blank"
-        rel="nofollow sponsored"
-        className={`text-center w-full py-3.5 rounded-xl text-sm font-black transition ${
+        slug={game.slug}
+        price={game.price}
+        location="card"
+        page={pathname}
+        className={`text-center w-full py-3.5 rounded-xl text-sm font-black transition block ${
           game.highlight
             ? "bg-amber-600 text-white hover:bg-amber-700 shadow-md shadow-amber-200"
             : "bg-stone-900 text-amber-50 hover:bg-stone-800"
         }`}
       >
         Ver en Amazon →
-      </a>
+      </AmazonLink>
       <Link href={`/juegos/${game.slug}`} className="text-center w-full mt-2 text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">
         Ver ficha completa →
       </Link>

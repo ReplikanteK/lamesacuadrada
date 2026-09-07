@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/data/games";
+import { AmazonLink } from "@/components/AmazonLink";
 
 export const metadata: Metadata = {
   title: "Azul vs Splendor 2026: ¿Cuál es mejor abstracto? | La Mesa Cuadrada",
@@ -47,7 +48,8 @@ export default function AzulVsSplendor() {
                 <li className="flex justify-between"><span className="text-stone-500">Edad</span><span className="font-bold">{g.age}</span></li>
                 <li className="flex justify-between"><span className="text-stone-500">Ideal</span><span className="font-bold text-xs text-right">{g.bestFor}</span></li>
               </ul>
-              <a href={g.amazonUrl} target="_blank" rel="nofollow sponsored" className="mt-5 block text-center w-full py-3 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700">Ver en Amazon →</a>
+              <AmazonLink href={g.amazonUrl} slug={g.slug} price={g.price} location="vs" page="/azul-vs-splendor" className="mt-5 block text-center w-full py-3 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700">Ver en Amazon →</AmazonLink>
+              <Link href={`/juegos/${g.slug}`} className="mt-2 block text-center text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">Ver ficha completa →</Link>
             </div>
           ))}
         </div>

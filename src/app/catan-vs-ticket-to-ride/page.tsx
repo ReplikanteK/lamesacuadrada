@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/data/games";
+import { AmazonLink } from "@/components/AmazonLink";
 
 export const metadata: Metadata = {
   title: "Catan vs Ticket to Ride 2026: ¿Cuál comprar primero? | La Mesa Cuadrada",
@@ -53,8 +54,9 @@ export default function CatanVsTicket() {
                 <li className="flex justify-between"><span className="text-stone-500">BGG</span><span className="font-bold">★ {g.bggRating}/10</span></li>
                 <li className="flex justify-between"><span className="text-stone-500">Ideal</span><span className="font-bold text-xs text-right">{g.bestFor}</span></li>
               </ul>
-              <a href={g.amazonUrl} target="_blank" rel="nofollow sponsored" className="mt-5 block text-center w-full py-3 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700 shadow-md">Ver en Amazon →</a>
+              <AmazonLink href={g.amazonUrl} slug={g.slug} price={g.price} location="vs" page="/catan-vs-ticket-to-ride" className="mt-5 block text-center w-full py-3 rounded-xl bg-amber-600 text-white text-sm font-black hover:bg-amber-700 shadow-md">Ver en Amazon →</AmazonLink>
               <p className="text-xs text-stone-400 text-center mt-2">Afiliado · {g.pros[0]}</p>
+              <Link href={`/juegos/${g.slug}`} className="mt-2 block text-center text-xs font-bold text-amber-700 hover:text-amber-800 underline underline-offset-4">Ver ficha completa →</Link>
             </div>
           ))}
         </div>
