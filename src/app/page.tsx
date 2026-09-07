@@ -291,7 +291,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             itemListElement: games.slice(0, 9).map((g, i) => ({
               "@type": "ListItem",
               position: i + 1,
-              item: { "@type": "Product", name: g.name, url: `https://lamesacuadrada.vercel.app/?q=${g.slug}` },
+              url: `https://lamesacuadrada.vercel.app/juegos/${g.slug}`,
+              name: g.name,
             })),
           }),
         }}
