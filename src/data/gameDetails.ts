@@ -411,4 +411,14 @@ export const gameDetails: Record<string, GameDetail> = {
     trivia: "2013 Repos, +1M copias. Iconos 110 universales.",
     faq: [{ q: "¿Concept o Dixit?", a: "Concept iconos; Dixit arte. Ambos fiesta 4-8." }],
   },
+  "zombicide": {
+    intro: "1-6 supervivientes vs horda. Adrenalina, armas y 25 misiones.",
+    description: "Zombicide 2ª Ed es coop zombis: buscas armas, matas zombis y ganas adrenalina que te da habilidades pero atrae más zombis. 25 misiones, 60 min, 1-6 ideal 3-6, 14+ con miniaturas. Segunda edición reglas simplificadas.",
+    howToPlay: ["Mueve superviviente 3 acciones y busca armas", "Mata zombis, gana adrenalina y sube nivel", "Completa objetivo misión antes de ser devorado"],
+    idealFor: ["Cooperativo zombis 1-6", "Grupo que ama miniaturas y acción"],
+    notIdealFor: ["Quien odia tema zombi o precio 99€"],
+    veredicto: "Horda que no perdona. Te da 25 misiones coop con adrenalina; te pide mesa grande y tolerancia a dados.",
+    trivia: "CMON 2021 2ª Ed, 220 votos 4.7. Expansiones Washington Z.C., Fort Hendrix.",
+    faq: [{ q: "¿Zombicide o Mansiones?", a: "Zombicide acción dados; Mansiones investigación app." }],
+  },
 };
