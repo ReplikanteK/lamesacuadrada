@@ -13,7 +13,7 @@ export type GameDetail = {
 export const gameDetails: Record<string, GameDetail> = {
   catan: {
     intro: "El clásico de negociación y colonización que convirtió a media España en jugona. Construye carreteras, funda poblados y negocia como si tu vida dependiera de una oveja.",
-    description: "Catan es el puerta de entrada perfecto desde 1995. Cada partida genera una isla distinta con números aleatorios: el dado decide qué produce cada hexágono y tú decides con quién comerciar. La clave es adaptarte — si te bloquean la expansión, cambia a desarrollo o al puerto 3:1. No es el más profundo, pero es el que más historias genera en 90 min.",
+    description: "Catan es la puerta de entrada perfecta desde 1995. Cada partida genera una isla distinta con números aleatorios: el dado decide qué produce cada hexágono y tú decides con quién comerciar. La clave es adaptarte — si te bloquean la expansión, cambia a desarrollo o al puerto 3:1. No es el más profundo, pero es uno de los que más historias genera en 90 min.",
     howToPlay: ["Tira dados → cada hexágono con ese número produce su recurso", "Cambia recursos con el banco o jugadores para construir carretera/poblado/ciudad", "Primero en 10 puntos gana — poblados, ciudades, carretera más larga y cartas de desarrollo"],
     idealFor: ["Grupo 3-4 que quiere negociar y reírse", "Familia con niños 10+ que ya domina Monopoly"],
     notIdealFor: ["Pareja (a 2 pierde la negociación)", "Quien odia el azar de dados"],
@@ -113,8 +113,8 @@ export const gameDetails: Record<string, GameDetail> = {
   },
   wingspan: {
     intro: "Pájaros preciosos, huevos y motor de hábitat. Relajante hasta que te bloquean el comedero.",
-    description: "Wingspan es motor de cartas: juegas ave en hábitat pagando comida, activas fila para ganar comida/huevos/cartas. Cada ave da puntos + poder único. Tiene solo pero brilla a 3-4 donde el comedero compartido y objetivos comunes crean interacción ligera.",
-    howToPlay: ["4 acciones: jugar ave (paga comida), ganar comida del comedero, poner huevos, robar cartas — activa toda la fila", "Gestiona cubos de acción que disminuyen cada ronda (5→1)", "Puntos por aves, huevos, comida cacheada y objetivos; 70-80 gana"],
+    description: "Wingspan es motor de cartas: juegas ave en hábitat pagando comida, activas fila para ganar comida/huevos/cartas. Cada ave da puntos + poder único. Tiene solo pero brilla a 3-4 donde el comedero compartido y los objetivos de ronda generan interacción ligera.",
+    howToPlay: ["4 acciones: jugar ave (paga comida), ganar comida del comedero, poner huevos, robar cartas — activa toda la fila", "Gestiona cubos de acción que disminuyen cada ronda (5→1)", "Puntos por aves, huevos, comida cacheada y objetivos; en muchas partidas superar 70 puntos ya supone buena puntuación"],
     idealFor: ["Familia euro medio que ama arte", "Solo + multijugador ligero"],
     notIdealFor: ["Quien odia azar de comedero"],
     veredicto: "Un aviario que respira: juegas ave, activas hábitat y el motor canta. Te regala 60 min bonitos y relajados; te pide perdonar el azar del comedero y la calma competitiva.",
