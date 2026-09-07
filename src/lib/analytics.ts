@@ -1,5 +1,3 @@
-import { track } from "@vercel/analytics";
-
 type AmazonClickPayload = {
   slug: string;
   asin: string;
@@ -20,10 +18,24 @@ export function trackAmazonClick({
   location,
   page,
 }: AmazonClickPayload) {
-  const payload = { slug, asin: asin || "", price, location, page };
+  const payload = {
+    event: "amazon_click" as const,
+    timestamp: new Date().toISOString(),
+    slug,
+    asin: asin || "",
+    price,
+    location,
+    page,
+  };
   try {
-    // Official Vercel track — queues if script not yet loaded, never blocks navigation
-    track("amazon_click", payload);
+    const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+    // Fire-and-forget, never blocks navigation (target=_blank already)
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon("/api/track", blob);
+    } else {
+      // Fallback keepalive fetch — also non-blocking
+      fetch("/api/track", { method: "POST", body: JSON.stringify(payload), headers: { "Content-Type": "application/json" }, keepalive: true }).catch(() => {});
+    }
   } catch {
     // never throw — navigation must not be blocked
   }
