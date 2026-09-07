@@ -5,7 +5,7 @@ import { GameCard } from "@/components/GameCard";
 
 export const metadata: Metadata = {
   title: "Mejores juegos familiares 2026 (8+ años) | La Mesa Cuadrada",
-  description: "Ranking juegos familiares 2026 para 8+ años: Catan, Azul, Kingdomino, Cascadia, Ticket to Ride. Partidas 15 a 90 min, selección editorial 8+. Precios Amazon.",
+  description: "Ranking juegos familiares 2026 para 8+ años: Catan, Azul, Kingdomino, Cascadia, Ticket to Ride, The Crew, Mysterium, La Isla Prohibida. Partidas 15 a 90 min, selección 8+. Precios Amazon.",
   alternates: { canonical: "https://lamesacuadrada.vercel.app/mejores-familiares" },
   openGraph: {
     title: "Mejores juegos familiares 2026 (8+ años) | La Mesa Cuadrada",
@@ -31,7 +31,7 @@ export default function MejoresFamiliares() {
       <article className="max-w-6xl mx-auto px-6 py-10 w-full">
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Familiar 8+ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa familiares 2026</h1>
-        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para jugar con niños 8+ y adultos sin que nadie se aburra. Partidas de 15 a 90 min, bonitos en mesa y criterio editorial por accesibilidad. Ordenados por BGG ★.</p>
+        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para jugar con niños 8+ y adultos sin que nadie se aburra. Partidas de 15 a 90 min, bonitos en mesa y criterio editorial por accesibilidad. Incluye novedades cooperativas familiares The Crew, Mysterium y La Isla Prohibida. Ordenados por BGG ★.</p>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {fam.map((g) => (
             <GameCard key={g.slug} game={g} />

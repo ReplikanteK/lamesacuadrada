@@ -5,11 +5,11 @@ import { GameCard } from "@/components/GameCard";
 
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa baratos 2026 (<25€) | La Mesa Cuadrada",
-  description: "8 juegos baratos 2026 por <25€: Dobble, Codenames, Kingdomino, Just One, Exploding Kittens y más. Comparativa real con BGG, precio Amazon y veredicto.",
+  description: "10 juegos baratos 2026 por <25€: Dobble, Codenames, Kingdomino, Just One, Exploding Kittens, The Crew, La Isla Prohibida y más. Comparativa real con BGG, precio Amazon y veredicto.",
   alternates: { canonical: "https://lamesacuadrada.vercel.app/mejores-baratos" },
   openGraph: {
     title: "Mejores juegos de mesa baratos 2026 (<25€) | La Mesa Cuadrada",
-    description: "8 juegos baratos 2026 por <25€: Dobble, Codenames, Kingdomino, Just One, Exploding Kittens.",
+    description: "10 juegos baratos 2026 por <25€: Dobble, Codenames, Kingdomino, Just One, Exploding Kittens, The Crew, La Isla.",
     url: "https://lamesacuadrada.vercel.app/mejores-baratos",
   },
 };
@@ -35,7 +35,7 @@ export default function MejoresBaratos() {
       <article className="max-w-6xl mx-auto px-6 py-10 w-full">
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-emerald-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Baratos &lt;25€ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa baratos 2026</h1>
-        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">8 juegos por menos de 25€ que no parecen baratos en mesa. Todos con reglas en 10 min y veredicto honesto. Ordenados por BGG ★.</p>
+        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">10 juegos por menos de 25€ que no parecen baratos en mesa. Incluye novedades The Crew y La Isla Prohibida. Todos con reglas en 10 min y veredicto honesto. Ordenados por BGG ★.</p>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {baratos.map((g) => (
             <GameCard key={g.slug} game={g} />
