@@ -24,6 +24,21 @@ export const metadata: Metadata = {
     description: "Comparativas reales sin humo: jugadores, duración, edad y precio. Con enlaces afiliados Amazon transparentes.",
     locale: "es_ES",
     type: "website",
+    url: "https://lamesacuadrada.vercel.app",
+    images: [
+      {
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "La Mesa Cuadrada — Mejores juegos de mesa 2026: comparativa real",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La Mesa Cuadrada - Mejores Juegos de Mesa 2026",
+    description: "Comparativas reales sin humo: jugadores, duración, edad y precio.",
+    images: ["/og-home.jpg"],
   },
 };
 
