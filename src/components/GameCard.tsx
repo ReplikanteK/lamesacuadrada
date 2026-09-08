@@ -39,9 +39,10 @@ export function GameCard({ game }: { game: Game }) {
 
       <div className="flex items-center gap-2.5 mb-3">
         <div className="w-7 h-7 rounded-full bg-amber-100 border border-amber-200 text-amber-700 flex items-center justify-center flex-shrink-0" aria-hidden>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="12" cy="7" r="3.5" />
-            <path d="M7 13c0-1.5 1.2-2.7 2.7-2.7h4.6C15.8 10.3 17 11.5 17 13v4.5c0 .8-.7 1.5-1.5 1.5h-7A1.5 1.5 0 0 1 7 17.5V13Z" />
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="4" y="4" width="16" height="12" rx="1.5" fill="white" fillOpacity="0.95" stroke="currentColor" strokeWidth="1.2" />
+            <path d="M7 16 L6 20 M17 16 L18 20 M7 7 H17" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+            <rect x="8" y="7" width="8" height="6" rx="0.5" fill="currentColor" fillOpacity="0.15" />
           </svg>
         </div>
         <Link href={`/juegos/${game.slug}`} className="min-w-0 flex-1 hover:opacity-80">
