@@ -210,10 +210,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
           {[
             { title: "Mejores familiares", desc: "Para toda la familia 8+", slug: "/mejores-familiares", badge: "" },
             { title: "Azul vs Splendor", desc: "Duelo abstractos elegantes", slug: "/azul-vs-splendor", badge: "" },
-            { title: "Mejores baratos <25€", desc: "12 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "" },
+            { title: "Mejores baratos <25€", desc: "13 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "" },
             { title: "Mejores para niños 6+", desc: "6-8+ sin aburrir al adulto", slug: "/mejores-ninos", badge: "¡Nuevo!" },
-            { title: "Cooperativos Top", desc: "Todos vs el juego — 6 títulos", slug: "/juegos-cooperativos", badge: "¡Nuevo!" },
-            { title: "Mejores de cartas", desc: "Draft, bazas y combos — 14", slug: "/mejores-cartas", badge: "¡Nuevo!" },
+            { title: "Cooperativos Top", desc: "Todos vs el juego — 7 títulos", slug: "/juegos-cooperativos", badge: "¡Nuevo!" },
+            { title: "Mejores de cartas", desc: "Draft, bazas y combos — 12", slug: "/mejores-cartas", badge: "¡Nuevo!" },
           ].map((c) => {
             const isLive = true;
             return isLive ? (

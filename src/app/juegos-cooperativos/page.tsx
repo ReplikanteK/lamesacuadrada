@@ -5,11 +5,11 @@ import { GameCard } from "@/components/GameCard";
 
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa cooperativos 2026 | La Mesa Cuadrada",
-  description: "Ranking cooperativos 2026: Pandemic, The Crew, Mysterium, Zombicide, La Isla Prohibida, Just One. Todos vs el juego, sin competir entre vosotros. Precios Amazon.",
+  description: "Ranking cooperativos 2026: Pandemic, Paleo, The Crew, Mysterium, Zombicide, La Isla Prohibida, Just One. Todos vs el juego, sin competir entre vosotros. Precios Amazon.",
   alternates: { canonical: "https://lamesacuadrada.vercel.app/juegos-cooperativos" },
   openGraph: {
     title: "Mejores juegos de mesa cooperativos 2026 | La Mesa Cuadrada",
-    description: "Ranking cooperativos 2026: Pandemic, The Crew, Mysterium, Zombicide, La Isla Prohibida, Just One.",
+    description: "Ranking cooperativos 2026: Pandemic, Paleo, The Crew, Mysterium, Zombicide, La Isla Prohibida, Just One.",
     url: "https://lamesacuadrada.vercel.app/juegos-cooperativos",
   },
 };
@@ -39,7 +39,7 @@ export default function Cooperativos() {
         </div>
         <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm max-w-4xl">
           <p className="font-black text-stone-900">◈ ¿Cuál elijo?</p>
-          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">Iniciación 30′:</span> La Isla Prohibida. <span className="font-black">Bolsillo 20′:</span> The Crew. <span className="font-black">Hasta 7:</span> Mysterium. <span className="font-black">Zombis 1-6:</span> Zombicide. <span className="font-black">Clásico 45′:</span> Pandemic. <span className="font-black">Palabras 3-7:</span> Just One.</p>
+          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">Iniciación 30′:</span> La Isla Prohibida. <span className="font-black">Bolsillo 20′:</span> The Crew. <span className="font-black">Hasta 7:</span> Mysterium. <span className="font-black">Zombis 1-6:</span> Zombicide. <span className="font-black">Supervivencia 45-60:</span> Paleo. <span className="font-black">Clásico 45′:</span> Pandemic. <span className="font-black">Palabras 3-7:</span> Just One.</p>
         </div>
         <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
           <p className="text-sm font-black text-stone-900">Metodología</p>
