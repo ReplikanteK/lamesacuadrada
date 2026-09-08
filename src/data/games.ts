@@ -278,7 +278,7 @@ export const games: Game[] = [
     pros: ["Arte precioso aves", "Motor relajante", "Solo y competitivo"],
     cons: ["Precio alto"],
     bestFor: "Familia que quiere euro medio bonito",
-    category: ["familiar", "estrategia", "2-jugadores", "cartas"],
+    category: ["familiar", "estrategia", "2-jugadores"],
   },
   {
     slug: "terraforming-mars",
@@ -301,7 +301,7 @@ export const games: Game[] = [
     pros: ["Profundo y temático", "200+ cartas únicas", "Top 5 BGG años"],
     cons: ["2h, no familiar"],
     bestFor: "Jugones estrategia dura",
-    category: ["estrategia", "2-jugadores", "cartas"],
+    category: ["estrategia", "2-jugadores"],
   },
   {
     slug: "sushi-go-party",
@@ -439,7 +439,7 @@ export const games: Game[] = [
     pros: ["Zoo + cartas 200h", "Top 3 BGG", "Muy profundo"],
     cons: ["3h y complejo"],
     bestFor: "Jugones que quieren el siguiente nivel tras Wingspan",
-    category: ["estrategia", "2-jugadores", "cartas"],
+    category: ["estrategia", "2-jugadores"],
   },
   {
     slug: "brass-birmingham",

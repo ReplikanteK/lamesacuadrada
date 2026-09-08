@@ -243,9 +243,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
           <div className="absolute top-0 right-0 w-32 h-32 bg-amber-600/10 rounded-full blur-3xl" />
           <div className="relative">
             <h3 className="text-xl font-black tracking-tight text-amber-50">¿Cuál te conviene?</h3>
-            <p className="text-amber-100/70 mt-1.5 text-sm font-medium">Prueba filtros arriba: 2 jugadores + ≤30 min + cooperativo</p>
+            <p className="text-amber-100/70 mt-1.5 text-sm font-medium">Prueba filtros arriba: 4 jugadores + Familiar</p>
             <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
-              <Link href="/?jugadores=2&duracion=30#comparativa" className="bg-amber-50 text-stone-900 px-4 py-2 rounded-full hover:bg-white">2p + 30 min →</Link>
+              <Link href="/?jugadores=4&categoria=familiar#comparativa" className="bg-amber-50 text-stone-900 px-4 py-2 rounded-full hover:bg-white">4 jugadores + Familiar →</Link>
               <Link href="/?categoria=fiesta&jugadores=6#comparativa" className="bg-white/90 text-stone-900 px-4 py-2 rounded-full hover:bg-white">Fiesta 6+ →</Link>
             </div>
           </div>
@@ -256,7 +256,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         <h3 className="font-black text-lg tracking-tight text-stone-900 mb-4">Preguntas frecuentes</h3>
         <div className="space-y-3">
           {[
-            { q: "¿Qué juego de mesa comprar primero?", a: "Catan si sois 3-4, Azul o Ticket to Ride si sois 2. Los 3 se explican en 10 minutos." },
+            { q: "¿Qué juego de mesa comprar primero?", a: "Si sois 3-4, Catan es una puerta de entrada clásica. Para 2 jugadores, 7 Wonders Duel o Azul son opciones más directas." },
             { q: "¿Cómo funcionan filtros jugadores/duración?", a: "Usa /?jugadores=2&duracion=30 — la URL es compartible y filtra en servidor sin JS." },
             { q: "¿Ganáis comisión?", a: "Sí, afiliado Amazon. A ti no te cuesta más y nos permite mantener comparativas sin patrocinios." },
           ].map((f) => (
@@ -281,7 +281,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
-              { "@type": "Question", name: "¿Qué juego de mesa comprar primero?", acceptedAnswer: { "@type": "Answer", text: "Catan si sois 3-4, Azul o Ticket to Ride si sois 2. Los 3 se explican en 10 minutos." } },
+              { "@type": "Question", name: "¿Qué juego de mesa comprar primero?", acceptedAnswer: { "@type": "Answer", text: "Si sois 3-4, Catan es una puerta de entrada clásica. Para 2 jugadores, 7 Wonders Duel o Azul son opciones más directas." } },
               { "@type": "Question", name: "¿Cómo funcionan filtros jugadores/duración?", acceptedAnswer: { "@type": "Answer", text: "Usa /?jugadores=2&duracion=30 — la URL es compartible y filtra en servidor sin JS." } },
               { "@type": "Question", name: "¿Ganáis comisión?", acceptedAnswer: { "@type": "Answer", text: "Sí, afiliado Amazon. A ti no te cuesta más y nos permite mantener comparativas sin patrocinios." } },
             ],
