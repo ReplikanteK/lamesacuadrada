@@ -136,10 +136,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
               <Link href={buildUrl(params, { categoria: "cartas" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cartas" ? "bg-violet-700 text-white border-violet-700" : "bg-violet-50 text-violet-900 border-violet-200 hover:bg-violet-100"}`}>Cartas</Link>
             </div>
           </div>
-          <form action="/" method="get" className="mt-4 flex gap-2">
-            <input name="q" defaultValue={params.q || ""} placeholder="🔍 Buscar Catan, Azul, Wingspan..." className="flex-1 px-4 py-2.5 rounded-xl border-2 border-amber-200 focus:border-amber-400 focus:outline-none text-sm font-medium" />
-            <button type="submit" className="px-5 py-2.5 rounded-xl bg-stone-900 text-amber-50 text-sm font-black hover:bg-stone-800">Buscar</button>
-            {params.q && <a href="/#comparativa" className="px-4 py-2.5 rounded-xl bg-white border-2 border-stone-200 text-sm font-bold hover:bg-stone-50">✕</a>}
+          <form action="/" method="get" className="mt-4 flex gap-2 flex-wrap sm:flex-nowrap">
+            <input name="q" defaultValue={params.q || ""} placeholder="🔍 Buscar Catan, Azul, Wingspan..." className="flex-1 min-w-0 px-4 py-2.5 rounded-xl border-2 border-amber-200 focus:border-amber-400 focus:outline-none text-sm font-medium" />
+            <button type="submit" className="shrink-0 px-5 py-2.5 rounded-xl bg-stone-900 text-amber-50 text-sm font-black hover:bg-stone-800">Buscar</button>
+            {params.q && <a href="/#comparativa" className="shrink-0 px-4 py-2.5 rounded-xl bg-white border-2 border-stone-200 text-sm font-bold hover:bg-stone-50">✕</a>}
           </form>
           <div className="flex flex-wrap gap-2 mt-3 text-xs">
             <Link href="/mejores-2-jugadores" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Ranking 2 jugadores →</Link>
