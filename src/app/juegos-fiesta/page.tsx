@@ -5,11 +5,11 @@ import { GameCard } from "@/components/GameCard";
 
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa para fiestas 6+ jugadores 2026 | La Mesa Cuadrada",
-  description: "Ranking juegos fiesta 6-8 jugadores 2026: Dixit, Codenames, Dobble, Just One, Sushi Go Party. 15 min, sin explicación y risas. Precios Amazon.",
+  description: "Ranking juegos fiesta 6-8 jugadores 2026: Trio As d'Or, Dixit, Codenames, Dobble, Just One, Sushi Go Party. 15 min, sin explicación y risas. Precios Amazon.",
   alternates: { canonical: "https://lamesacuadrada.vercel.app/juegos-fiesta" },
   openGraph: {
     title: "Mejores juegos de mesa para fiestas 6+ jugadores 2026 | La Mesa Cuadrada",
-    description: "Ranking juegos fiesta 6-8 jugadores 2026: Dixit, Codenames, Dobble, Just One, Sushi Go Party.",
+    description: "Ranking juegos fiesta 6-8 jugadores 2026: Trio, Dixit, Codenames, Dobble, Just One, Sushi Go Party.",
     url: "https://lamesacuadrada.vercel.app/juegos-fiesta",
   },
 };
@@ -39,7 +39,7 @@ export default function JuegosFiesta() {
         </div>
         <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm max-w-4xl">
           <p className="font-black text-stone-900">◈ ¿Cuál elijo?</p>
-          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">6-8 creativo:</span> Dixit. <span className="font-black">Equipos:</span> Codenames. <span className="font-black">Bolsillo:</span> Dobble. <span className="font-black">Cooperativo fiesta:</span> Just One. <span className="font-black">Comer:</span> Sushi Go Party.</p>
+          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">6-8 creativo:</span> Dixit. <span className="font-black">Equipos:</span> Codenames. <span className="font-black">Bolsillo:</span> Dobble/Trio. <span className="font-black">Cooperativo fiesta:</span> Just One. <span className="font-black">Comer:</span> Sushi Go Party. <span className="font-black">Barato 15′:</span> Trio 11,90€.</p>
         </div>
         <div className="mt-8 flex gap-3">
           <Link href="/" className="bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Volver a inicio</Link>
