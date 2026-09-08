@@ -202,7 +202,6 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
                 {c.badge ? <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-amber-600 text-white">{c.badge}</span> : null}
                 <div className="font-black mt-3 text-stone-900">{c.title} →</div>
                 <div className="text-sm font-medium text-stone-600">{c.desc}</div>
-                <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
               </Link>
             );
           })}
@@ -226,14 +225,12 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
                 {c.badge ? <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-emerald-600 text-white">{c.badge}</span> : null}
                 <div className="font-black mt-3 text-stone-900">{c.title} →</div>
                 <div className="text-sm font-medium text-stone-600">{c.desc}</div>
-                <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
               </Link>
             ) : (
               <div key={c.slug} className="bg-white border-2 rounded-2xl p-5 shadow-sm block opacity-70 border-amber-100">
                 <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-stone-100 text-stone-600">{c.badge}</span>
                 <div className="font-black mt-3 text-stone-900">{c.title}</div>
                 <div className="text-sm font-medium text-stone-600">{c.desc}</div>
-                <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
               </div>
             );
           })}
