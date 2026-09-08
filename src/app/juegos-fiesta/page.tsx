@@ -5,11 +5,11 @@ import { GameCard } from "@/components/GameCard";
 
 export const metadata: Metadata = {
   title: "Mejores juegos de mesa para fiestas 6+ jugadores 2026 | La Mesa Cuadrada",
-  description: "Ranking juegos fiesta 6-8 jugadores 2026: Trio As d'Or, Dixit, Codenames, Dobble, Just One, Sushi Go Party. 15 min, sin explicación y risas. Precios Amazon.",
+  description: "Ranking juegos fiesta 6-12 jugadores 2026: Concept 4-12, Trio As d'Or, Dixit, Codenames, Dobble, Just One, Sushi Go Party. 15-40 min, sin explicación y risas. Precios Amazon.",
   alternates: { canonical: "https://lamesacuadrada.vercel.app/juegos-fiesta" },
   openGraph: {
     title: "Mejores juegos de mesa para fiestas 6+ jugadores 2026 | La Mesa Cuadrada",
-    description: "Ranking juegos fiesta 6-8 jugadores 2026: Trio, Dixit, Codenames, Dobble, Just One, Sushi Go Party.",
+    description: "Ranking juegos fiesta 6-12 jugadores 2026: Concept 4-12, Trio, Dixit, Codenames, Dobble, Just One, Sushi Go Party.",
     url: "https://lamesacuadrada.vercel.app/juegos-fiesta",
   },
 };
@@ -31,7 +31,7 @@ export default function JuegosFiesta() {
       <article className="max-w-6xl mx-auto px-6 py-10 w-full">
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-orange-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Fiesta 6+ • Actualizado Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa para fiestas 6+ jugadores</h1>
-        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para cuando sois 6-8 y nadie quiere leer reglas 20 min. Todos 15-30 min, se explican en 2 min y funcionan con no jugones. Ordenados por max jugadores.</p>
+        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para cuando sois 6-12 y nadie quiere leer reglas 20 min. Todos 15-40 min, se explican en 2 min y funcionan con no jugones. Incluye novedad Concept 4-12 sin palabras. Ordenados por max jugadores.</p>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {fiesta.map((g) => (
             <GameCard key={g.slug} game={g} />
@@ -39,7 +39,7 @@ export default function JuegosFiesta() {
         </div>
         <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm max-w-4xl">
           <p className="font-black text-stone-900">◈ ¿Cuál elijo?</p>
-          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">6-8 creativo:</span> Dixit. <span className="font-black">Equipos:</span> Codenames. <span className="font-black">Bolsillo:</span> Dobble/Trio. <span className="font-black">Cooperativo fiesta:</span> Just One. <span className="font-black">Comer:</span> Sushi Go Party. <span className="font-black">Barato 15′:</span> Trio 11,90€.</p>
+          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">6-8 creativo:</span> Dixit. <span className="font-black">Equipos:</span> Codenames. <span className="font-black">Sin palabras 4-12:</span> Concept. <span className="font-black">Bolsillo:</span> Dobble/Trio. <span className="font-black">Cooperativo fiesta:</span> Just One. <span className="font-black">Comer:</span> Sushi Go Party. <span className="font-black">Barato 15′:</span> Trio 11,90€.</p>
         </div>
         <div className="mt-8 flex gap-3">
           <Link href="/" className="bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Volver a inicio</Link>

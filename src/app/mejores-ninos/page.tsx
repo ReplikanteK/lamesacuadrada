@@ -4,19 +4,19 @@ import { games } from "@/data/games";
 import { GameCard } from "@/components/GameCard";
 
 export const metadata: Metadata = {
-  title: "Mejores juegos de mesa para niños 2026 (6-8+) | La Mesa Cuadrada",
-  description: "Juegos para niños 6-8+ años 2026: Dobble, Kingdomino, Dixit, Carcassonne y más. 15-60 min, reglas en 5 min. Comparativa con veredicto y precio Amazon.",
+  title: "Mejores juegos de mesa para niños 2026 (5-8+) | La Mesa Cuadrada",
+  description: "Juegos para niños 5-8+ años 2026: Dragomino 5+, Dobble, Kingdomino, Dixit, Carcassonne y más. 15-60 min, reglas en 5 min. Comparativa con veredicto y precio Amazon.",
   alternates: { canonical: "https://lamesacuadrada.vercel.app/mejores-ninos" },
   openGraph: {
-    title: "Mejores juegos de mesa para niños 2026 (6-8+) | La Mesa Cuadrada",
-    description: "Juegos para niños 6-8+ años 2026: Dobble, Kingdomino, Dixit, Carcassonne y más. 15-60 min.",
+    title: "Mejores juegos de mesa para niños 2026 (5-8+) | La Mesa Cuadrada",
+    description: "Juegos para niños 5-8+ años 2026: Dragomino 5+, Dobble, Kingdomino, Dixit, Carcassonne y más. 15-60 min.",
     url: "https://lamesacuadrada.vercel.app/mejores-ninos",
   },
 };
 
 export default function MejoresNinos() {
   const ninos = games
-    .filter((g) => ["6+", "7+", "8+"].includes(g.age) && g.category.includes("familiar"))
+    .filter((g) => ["5+", "6+", "7+", "8+"].includes(g.age) && g.category.includes("familiar"))
     .sort((a, b) => b.bggRating - a.bggRating);
 
   return (
@@ -31,9 +31,9 @@ export default function MejoresNinos() {
         </div>
       </header>
       <article className="max-w-6xl mx-auto px-6 py-10 w-full">
-        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-teal-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Niños 6-8+ • Sep 2026</div>
+        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-teal-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Niños 5-8+ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa para niños 2026</h1>
-        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para familias con niños de 6 a 8+ años · partidas de 15 a 60 min, se explican en 5 min, bonitos en mesa. Con veredicto para quién / no para quién.</p>
+        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para familias con niños de 5 a 8+ años · partidas de 15 a 60 min, se explican en 5 min, bonitos en mesa. Incluye novedad Dragomino 5+ sin leer (Kinderspiel 2021). Con veredicto para quién / no para quién.</p>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {ninos.map((g) => (
             <GameCard key={g.slug} game={g} />
