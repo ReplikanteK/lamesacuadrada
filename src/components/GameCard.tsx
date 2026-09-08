@@ -37,12 +37,15 @@ export function GameCard({ game }: { game: Game }) {
         />
       </div>
 
-      <Link href={`/juegos/${game.slug}`} className="block mb-3 hover:opacity-80">
-        <div className="font-black leading-none text-stone-900 truncate hover:text-amber-700">{game.name}</div>
-        <div className="text-xs font-medium text-stone-500 truncate">
-          {game.publisher} · {game.year} · <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-amber-700">★ {game.bggRating} BGG</a>
-        </div>
-      </Link>
+      <div className="flex items-center gap-2.5 mb-3">
+        <div className="w-7 h-7 rounded-full bg-amber-100 border border-amber-200 text-amber-700 flex items-center justify-center text-xs font-black flex-shrink-0" aria-hidden>★</div>
+        <Link href={`/juegos/${game.slug}`} className="min-w-0 flex-1 hover:opacity-80">
+          <div className="font-black leading-none text-stone-900 truncate hover:text-amber-700">{game.name}</div>
+          <div className="text-xs font-medium text-stone-500 truncate">
+            {game.publisher} · {game.year} · <a href={`https://boardgamegeek.com/boardgame/${game.bggId}`} target="_blank" rel="noopener" className="underline hover:text-amber-700">★ {game.bggRating} BGG</a>
+          </div>
+        </Link>
+      </div>
 
       <div className="mb-4">
         <div className="text-2xl font-black tracking-tight text-stone-900">
