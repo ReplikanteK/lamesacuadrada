@@ -55,7 +55,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
 
   const verTodos = params.ver === "todos";
   const hasFilters = !!(jugadores || duracion || categoria || params.q);
-  const showing = hasFilters ? filtered : verTodos ? filtered : games.slice(0, 9);
+  const sortedFiltered = [...filtered].sort((a, b) => b.bggRating - a.bggRating);
+  const sortedGames = [...games].sort((a, b) => b.bggRating - a.bggRating);
+  const showing = hasFilters ? sortedFiltered : verTodos ? sortedFiltered : sortedGames.slice(0, 9);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FFFBEB] text-stone-900 antialiased">
@@ -295,7 +297,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             "@context": "https://schema.org",
             "@type": "ItemList",
             name: "Mejores juegos de mesa 2026",
-            itemListElement: games.slice(0, 9).map((g, i) => ({
+            itemListElement: [...games].sort((a,b)=>b.bggRating-a.bggRating).slice(0, 9).map((g, i) => ({
               "@type": "ListItem",
               position: i + 1,
               url: `https://lamesacuadrada.vercel.app/juegos/${g.slug}`,
