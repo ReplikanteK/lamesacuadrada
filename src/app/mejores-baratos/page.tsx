@@ -36,6 +36,18 @@ export default function MejoresBaratos() {
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-emerald-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Baratos &lt;25€ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa baratos 2026</h1>
         <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">13 juegos por menos de 25€ que no parecen baratos en mesa. Incluye novedades Trio 11,90€, Jaipur 19,99€, Dragomino 21,48€ 5+, Ciudadelas 13,42€, The Crew y La Isla Prohibida. Pensados para entrar rápido, con distintas curvas de aprendizaje. Ordenados por BGG ★.</p>
+        <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
+          <p className="font-black text-stone-900">Elige según lo que buscas</p>
+          <p className="text-xs font-bold tracking-wide uppercase text-amber-700 mt-1">Estas recomendaciones son criterio editorial; no sustituyen el ranking BGG</p>
+          <div className="mt-3 grid sm:grid-cols-2 gap-2 text-sm font-medium">
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">👫 Pareja barata</span> — <Link href="/juegos/jaipur" className="underline text-amber-700">Jaipur</Link> / <Link href="/juegos/dragomino" className="underline text-amber-700">Dragomino</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎉 Fiesta barata</span> — <Link href="/juegos/trio" className="underline text-amber-700">Trio</Link> / <Link href="/juegos/dobble" className="underline text-amber-700">Dobble</Link> / <Link href="/juegos/ciudadelas" className="underline text-amber-700">Ciudadelas</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">👶 Peques 5+</span> — <Link href="/juegos/dragomino" className="underline text-amber-700">Dragomino</Link> / <Link href="/juegos/dobble" className="underline text-amber-700">Dobble</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🤝 Coop barato</span> — <Link href="/juegos/the-crew-deep" className="underline text-amber-700">The Crew</Link> / <Link href="/juegos/isla-prohibida" className="underline text-amber-700">Isla Prohibida</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🧩 Puzzle barato</span> — <Link href="/juegos/kingdomino" className="underline text-amber-700">Kingdomino</Link></div>
+          </div>
+          <p className="text-xs font-medium text-stone-500 mt-3">Debajo: ranking por valoración BGG. Las etiquetas usan jugadores/duración/categoría + criterio editorial.</p>
+        </div>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {baratos.map((g) => (
             <GameCard key={g.slug} game={g} />

@@ -37,9 +37,17 @@ export default function MejoresCartas() {
             <GameCard key={g.slug} game={g} />
           ))}
         </div>
-        <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm max-w-4xl">
-          <p className="font-black text-stone-900">◈ ¿Cuál elijo?</p>
-          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">Solo 2:</span> 7 Wonders Duel / Jaipur. <span className="font-black">Fiesta 15′:</span> Trio / Dobble / Exploding Kittens. <span className="font-black">Draft 3-7:</span> 7 Wonders / Sushi Go Party. <span className="font-black">Bazas coop:</span> The Crew. <span className="font-black">Motor ligero:</span> Splendor.</p>
+        <div className="mt-8 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
+          <p className="font-black text-stone-900">Elige según lo que buscas</p>
+          <p className="text-xs font-bold tracking-wide uppercase text-amber-700 mt-1">Estas recomendaciones son criterio editorial; no sustituyen el ranking BGG</p>
+          <div className="mt-3 grid sm:grid-cols-2 gap-2 text-sm font-medium">
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">👫 Solo 2</span> — <Link href="/juegos/7-wonders-duel" className="underline text-amber-700">7 Wonders Duel</Link> / <Link href="/juegos/jaipur" className="underline text-amber-700">Jaipur</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎉 Fiesta 15′</span> — <Link href="/juegos/trio" className="underline text-amber-700">Trio</Link> / <Link href="/juegos/dobble" className="underline text-amber-700">Dobble</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🃏 Draft 3-7</span> — <Link href="/juegos/7-wonders" className="underline text-amber-700">7 Wonders</Link> / <Link href="/juegos/sushi-go-party" className="underline text-amber-700">Sushi Go</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🤝 Bazas coop</span> — <Link href="/juegos/the-crew-deep" className="underline text-amber-700">The Crew</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">💎 Motor ligero</span> — <Link href="/juegos/splendor" className="underline text-amber-700">Splendor</Link></div>
+          </div>
+          <p className="text-xs font-medium text-stone-500 mt-3">Debajo: ranking por valoración BGG. Las etiquetas usan jugadores/duración/categoría + criterio editorial.</p>
         </div>
         <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
           <p className="text-sm font-black text-stone-900">Metodología</p>

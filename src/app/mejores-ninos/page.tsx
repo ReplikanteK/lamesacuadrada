@@ -34,6 +34,18 @@ export default function MejoresNinos() {
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-teal-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Niños 5-8+ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa para niños 2026</h1>
         <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para familias con niños de 5 a 8+ años · partidas de 15 a 60 min, se explican en 5 min, bonitos en mesa. Incluye novedad Dragomino 5+ sin leer (Kinderspiel 2021). Con veredicto para quién / no para quién.</p>
+        <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
+          <p className="font-black text-stone-900">Elige según lo que buscas</p>
+          <p className="text-xs font-bold tracking-wide uppercase text-amber-700 mt-1">Estas recomendaciones son criterio editorial; no sustituyen el ranking BGG</p>
+          <div className="mt-3 grid sm:grid-cols-2 gap-2 text-sm font-medium">
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">👶 5+ sin leer</span> — <Link href="/juegos/dragomino" className="underline text-amber-700">Dragomino</Link> (domino + huevo)</div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎯 6+ reflejos</span> — <Link href="/juegos/dobble" className="underline text-amber-700">Dobble</Link> / <Link href="/juegos/exploding-kittens" className="underline text-amber-700">Exploding Kittens</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🧩 8+ táctico</span> — <Link href="/juegos/kingdomino" className="underline text-amber-700">Kingdomino</Link> / <Link href="/juegos/carcassonne" className="underline text-amber-700">Carcassonne</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎨 8+ creativo</span> — <Link href="/juegos/dixit" className="underline text-amber-700">Dixit</Link> / <Link href="/juegos/just-one" className="underline text-amber-700">Just One</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">⏱️ 15 min rápido</span> — <Link href="/juegos/dobble" className="underline text-amber-700">Dobble</Link> / <Link href="/juegos/trio" className="underline text-amber-700">Trio</Link></div>
+          </div>
+          <p className="text-xs font-medium text-stone-500 mt-3">Debajo: ranking por valoración BGG. Las etiquetas usan jugadores/duración/categoría + criterio editorial.</p>
+        </div>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {ninos.map((g) => (
             <GameCard key={g.slug} game={g} />
@@ -41,7 +53,7 @@ export default function MejoresNinos() {
         </div>
         <div className="mt-8 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
           <p className="text-sm font-black text-stone-900">Metodología</p>
-          <p className="text-sm text-stone-700 mt-1 font-medium">Filtrado edad 6+/7+/8+ + familiar + orden BGG. Valoramos que el adulto no sufra y el niño entienda en 5 min. <Link href="/metodologia" className="underline font-bold text-amber-700">Cómo rankeamos</Link> · Tag lamesacuadrad-21.</p>
+          <p className="text-sm text-stone-700 mt-1 font-medium">Filtrado edad 5+/6+/7+/8+ + familiar + orden BGG. Valoramos que el adulto no sufra y el niño entienda en 5 min. <Link href="/metodologia" className="underline font-bold text-amber-700">Cómo rankeamos</Link> · Tag lamesacuadrad-21.</p>
         </div>
         <div className="mt-8 flex gap-3">
           <Link href="/" className="bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Volver a inicio</Link>

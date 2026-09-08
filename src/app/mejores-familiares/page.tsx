@@ -32,6 +32,18 @@ export default function MejoresFamiliares() {
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-amber-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Familiar 5+ • Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa familiares 2026</h1>
         <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para jugar con niños 5+ y adultos sin que nadie se aburra. Partidas de 15 a 90 min, bonitos en mesa y criterio editorial por accesibilidad. Incluye novedades Harmonies 2024 (puzzle 3D), Dragomino 5+ sin leer y cooperativos The Crew, Mysterium y La Isla Prohibida. Ordenados por BGG ★.</p>
+        <div className="mt-6 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
+          <p className="font-black text-stone-900">Elige según lo que buscas</p>
+          <p className="text-xs font-bold tracking-wide uppercase text-amber-700 mt-1">Estas recomendaciones son criterio editorial; no sustituyen el ranking BGG</p>
+          <div className="mt-3 grid sm:grid-cols-2 gap-2 text-sm font-medium">
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">👶 Peques 5+ sin leer</span> — <Link href="/juegos/dragomino" className="underline text-amber-700">Dragomino</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🏠 Clásico familiar</span> — <Link href="/juegos/catan" className="underline text-amber-700">Catan</Link> / <Link href="/juegos/carcassonne" className="underline text-amber-700">Carcassonne</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🧩 Puzzle bonito</span> — <Link href="/juegos/azul" className="underline text-amber-700">Azul</Link> / <Link href="/juegos/harmonies" className="underline text-amber-700">Harmonies</Link> / <Link href="/juegos/cascadia" className="underline text-amber-700">Cascadia</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">⚡ Rápido 20 min</span> — <Link href="/juegos/kingdomino" className="underline text-amber-700">Kingdomino</Link> / <Link href="/juegos/trio" className="underline text-amber-700">Trio</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🤝 Cooperativo familiar</span> — <Link href="/juegos/isla-prohibida" className="underline text-amber-700">Isla Prohibida</Link> / <Link href="/juegos/the-crew-deep" className="underline text-amber-700">The Crew</Link></div>
+          </div>
+          <p className="text-xs font-medium text-stone-500 mt-3">Debajo: ranking por valoración BGG. Las etiquetas usan jugadores/duración/categoría + criterio editorial.</p>
+        </div>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {fam.map((g) => (
             <GameCard key={g.slug} game={g} />

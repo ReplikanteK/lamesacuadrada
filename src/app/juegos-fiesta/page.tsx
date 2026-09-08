@@ -37,9 +37,18 @@ export default function JuegosFiesta() {
             <GameCard key={g.slug} game={g} />
           ))}
         </div>
-        <div className="mt-8 bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm max-w-4xl">
-          <p className="font-black text-stone-900">◈ ¿Cuál elijo?</p>
-          <p className="text-sm leading-6 text-stone-600 mt-1 font-medium"><span className="font-black text-stone-900">6-8 creativo:</span> Dixit. <span className="font-black">Equipos:</span> Codenames. <span className="font-black">Sin palabras 4-12:</span> Concept. <span className="font-black">Bolsillo:</span> Dobble/Trio. <span className="font-black">Cooperativo fiesta:</span> Just One. <span className="font-black">Comer:</span> Sushi Go Party. <span className="font-black">Barato 15′:</span> Trio 11,90€.</p>
+        <div className="mt-8 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 max-w-4xl">
+          <p className="font-black text-stone-900">Elige según lo que buscas</p>
+          <p className="text-xs font-bold tracking-wide uppercase text-amber-700 mt-1">Estas recomendaciones son criterio editorial; no sustituyen el ranking BGG</p>
+          <div className="mt-3 grid sm:grid-cols-2 gap-2 text-sm font-medium">
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎨 6-8 creativo</span> — <Link href="/juegos/dixit" className="underline text-amber-700">Dixit</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">👥 Equipos</span> — <Link href="/juegos/codenames" className="underline text-amber-700">Codenames</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🤐 Sin palabras 4-12</span> — <Link href="/juegos/concept" className="underline text-amber-700">Concept</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🎒 Bolsillo</span> — <Link href="/juegos/dobble" className="underline text-amber-700">Dobble</Link> / <Link href="/juegos/trio" className="underline text-amber-700">Trio</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🤝 Coop fiesta</span> — <Link href="/juegos/just-one" className="underline text-amber-700">Just One</Link></div>
+            <div className="bg-white border border-amber-100 rounded-xl p-3"><span className="font-black">🍣 Comer</span> — <Link href="/juegos/sushi-go-party" className="underline text-amber-700">Sushi Go Party</Link></div>
+          </div>
+          <p className="text-xs font-medium text-stone-500 mt-3">Debajo: ranking por valoración BGG. Las etiquetas usan jugadores/duración/categoría + criterio editorial.</p>
         </div>
         <div className="mt-8 flex gap-3">
           <Link href="/" className="bg-stone-900 text-amber-50 px-6 py-3 rounded-xl text-sm font-black hover:bg-stone-800">Volver a inicio</Link>
