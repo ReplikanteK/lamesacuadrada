@@ -121,6 +121,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             <Link href={buildUrl(params, { categoria: "familiar" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "familiar" ? "bg-amber-600 text-white border-amber-600" : "bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100"}`}>Familiar</Link>
             <Link href={buildUrl(params, { categoria: "estrategia" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "estrategia" ? "bg-teal-700 text-white border-teal-700" : "bg-teal-50 text-teal-900 border-teal-200 hover:bg-teal-100"}`}>Estrategia</Link>
             <Link href={buildUrl(params, { categoria: "cooperativo" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cooperativo" ? "bg-emerald-700 text-white border-emerald-700" : "bg-emerald-50 text-emerald-900 border-emerald-200 hover:bg-emerald-100"}`}>Cooperativo</Link>
+            <Link href={buildUrl(params, { categoria: "cartas" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cartas" ? "bg-violet-700 text-white border-violet-700" : "bg-violet-50 text-violet-900 border-violet-200 hover:bg-violet-100"}`}>Cartas</Link>
             {hasFilters && (
               <Link href="/" className="ml-auto text-xs font-black bg-stone-100 text-stone-700 px-4 py-2 rounded-full hover:bg-stone-200 border border-stone-200">✕ Limpiar</Link>
             )}
@@ -213,6 +214,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             { title: "Mejores baratos <25€", desc: "12 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "¡Nuevo!" },
             { title: "Mejores para niños 6+", desc: "6-8+ sin aburrir al adulto", slug: "/mejores-ninos", badge: "¡Nuevo!" },
             { title: "Cooperativos Top", desc: "Todos vs el juego — 6 títulos", slug: "/juegos-cooperativos", badge: "¡Nuevo!" },
+            { title: "Mejores de cartas", desc: "Draft, bazas y combos — 14", slug: "/mejores-cartas", badge: "¡Nuevo!" },
           ].map((c) => {
             const isLive = true;
             return isLive ? (

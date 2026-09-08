@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mejores-baratos",
     "/mejores-ninos",
     "/juegos-cooperativos",
+    "/mejores-cartas",
     ...games.map((g) => `/juegos/${g.slug}`),
   ];
   return pages.map((p) => ({

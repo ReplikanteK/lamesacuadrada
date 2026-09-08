@@ -20,7 +20,7 @@ export type Game = {
   pros: string[];
   cons: string[];
   bestFor: string;
-  category: ("familiar" | "2-jugadores" | "fiesta" | "estrategia" | "cooperativo")[];
+  category: ("familiar" | "2-jugadores" | "fiesta" | "estrategia" | "cooperativo" | "cartas")[];
 };
 
 const TAG = "lamesacuadrad-21";
@@ -140,7 +140,7 @@ export const games: Game[] = [
     pros: ["Diseñado solo para 2", "Mucha profundidad", "3 formas de ganar"],
     cons: ["Solo 2 jugadores"],
     bestFor: "Parejas jugonas — el mejor 2p",
-    category: ["2-jugadores", "estrategia"],
+    category: ["2-jugadores", "estrategia", "cartas"],
   },
   {
     slug: "pandemic",
@@ -186,7 +186,7 @@ export const games: Game[] = [
     pros: ["Hasta 8 jugadores", "Creativo y risas", "Cero curva aprendizaje"],
     cons: ["No es táctico"],
     bestFor: "Fiestas y grupos grandes",
-    category: ["fiesta", "familiar"],
+    category: ["fiesta", "familiar", "cartas"],
   },
   {
     slug: "splendor",
@@ -208,7 +208,7 @@ export const games: Game[] = [
     pros: ["Elegante y rápido", "Motor de gemas adictivo", "Muy rejugable"],
     cons: ["Tema poco pegado"],
     bestFor: "Familias que quieren Euro ligero",
-    category: ["familiar", "2-jugadores", "estrategia"],
+    category: ["familiar", "2-jugadores", "estrategia", "cartas"],
   },
   // +12 nuevos para llegar a 20
   {
@@ -232,7 +232,7 @@ export const games: Game[] = [
     pros: ["15 min, cualquiera juega", "Para 8 con equipos", "Rejugabilidad infinita"],
     cons: ["Necesita 4+ para brillar"],
     bestFor: "Fiestas y no jugones",
-    category: ["fiesta", "familiar", "2-jugadores"],
+    category: ["fiesta", "familiar", "2-jugadores", "cartas"],
   },
   {
     slug: "dobble",
@@ -254,7 +254,7 @@ export const games: Game[] = [
     pros: ["6+ años, cabe en bolsillo", "Reflejos y risas", "5 mini-juegos"],
     cons: ["Muy ligero"],
     bestFor: "Niños y viaje",
-    category: ["fiesta", "familiar"],
+    category: ["fiesta", "familiar", "cartas"],
   },
   {
     slug: "wingspan",
@@ -278,7 +278,7 @@ export const games: Game[] = [
     pros: ["Arte precioso aves", "Motor relajante", "Solo y competitivo"],
     cons: ["Precio alto"],
     bestFor: "Familia que quiere euro medio bonito",
-    category: ["familiar", "estrategia", "2-jugadores"],
+    category: ["familiar", "estrategia", "2-jugadores", "cartas"],
   },
   {
     slug: "terraforming-mars",
@@ -301,7 +301,7 @@ export const games: Game[] = [
     pros: ["Profundo y temático", "200+ cartas únicas", "Top 5 BGG años"],
     cons: ["2h, no familiar"],
     bestFor: "Jugones estrategia dura",
-    category: ["estrategia", "2-jugadores"],
+    category: ["estrategia", "2-jugadores", "cartas"],
   },
   {
     slug: "sushi-go-party",
@@ -323,7 +323,7 @@ export const games: Game[] = [
     pros: ["Hasta 8, draft divertido", "Muy visual", "20 min"],
     cons: ["Ligero para jugones"],
     bestFor: "Fiesta familiar rápida",
-    category: ["fiesta", "familiar", "2-jugadores"],
+    category: ["fiesta", "familiar", "2-jugadores", "cartas"],
   },
   {
     slug: "kingdomino",
@@ -369,7 +369,7 @@ export const games: Game[] = [
     pros: ["Humor absurdo Oatmeal", "15 min", "Regalo perfecto"],
     cons: ["Mucho azar"],
     bestFor: "No jugones y regalo",
-    category: ["fiesta", "familiar"],
+    category: ["fiesta", "familiar", "cartas"],
   },
   {
     slug: "just-one",
@@ -393,7 +393,7 @@ export const games: Game[] = [
     pros: ["Cooperativo palabras", "Risas garantizadas", "Spiel 2019"],
     cons: ["3+ mínimo"],
     bestFor: "Fiesta 4-7 cooperativo",
-    category: ["fiesta", "cooperativo", "familiar"],
+    category: ["fiesta", "cooperativo", "familiar", "cartas"],
   },
   {
     slug: "cascadia",
@@ -439,7 +439,7 @@ export const games: Game[] = [
     pros: ["Zoo + cartas 200h", "Top 3 BGG", "Muy profundo"],
     cons: ["3h y complejo"],
     bestFor: "Jugones que quieren el siguiente nivel tras Wingspan",
-    category: ["estrategia", "2-jugadores"],
+    category: ["estrategia", "2-jugadores", "cartas"],
   },
   {
     slug: "brass-birmingham",
@@ -485,7 +485,7 @@ export const games: Game[] = [
     pros: ["Bazas cooperativo", "32 misiones", "Bolsillo"],
     cons: ["Necesita comunicación sutil"],
     bestFor: "Cooperativo 20 min",
-    category: ["cooperativo", "familiar"],
+    category: ["cooperativo", "familiar", "cartas"],
   },
   {
     slug: "mysterium",
@@ -576,7 +576,7 @@ export const games: Game[] = [
     pros: ["As d'Or 2024", "15 min bolsillo", "Hasta 6"],
     cons: ["No para 2", "Memoria pura"],
     bestFor: "Fiesta rápida y barata",
-    category: ["fiesta", "familiar"],
+    category: ["fiesta", "familiar", "cartas"],
   },
   {
     slug: "cities",
@@ -643,7 +643,7 @@ export const games: Game[] = [
     pros: ["Mejor 2p trading", "30 min", "Fichas bonus"],
     cons: ["Solo 2"],
     bestFor: "Pareja pura 2p",
-    category: ["2-jugadores", "estrategia", "familiar"],
+    category: ["2-jugadores", "estrategia", "familiar", "cartas"],
   },
   {
     slug: "dragomino",
