@@ -108,26 +108,39 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         </div>
       </section>
 
-      {/* Filtros funcionales */}
+      {/* P0.6: ¿Qué buscas? + filtros agrupados + búsqueda */}
       <section className="max-w-6xl mx-auto px-6 pt-8 w-full">
-        <div className="bg-white border-2 border-amber-100 rounded-2xl p-4 sm:p-5 shadow-sm">
-          <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
-            <span className="text-stone-700 mr-1">Filtros:</span>
-            <Link href={buildUrl(params, { jugadores: "2" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 2 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>◐ 2 jugadores</Link>
-            <Link href={buildUrl(params, { jugadores: "4" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 4 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>4 jugadores</Link>
-            <Link href={buildUrl(params, { jugadores: "6" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 6 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>6+ jugadores</Link>
-            <span className="w-px h-6 bg-amber-200 mx-1 hidden sm:block" />
-            <Link href={buildUrl(params, { duracion: "30" })} className={`px-4 py-2 rounded-full border-2 transition ${duracion === 30 ? "bg-amber-600 text-white border-amber-600" : "bg-white border-amber-200 hover:bg-amber-50"}`}>≤30 min</Link>
-            <Link href={buildUrl(params, { duracion: "60" })} className={`px-4 py-2 rounded-full border-2 transition ${duracion === 60 ? "bg-amber-600 text-white border-amber-600" : "bg-white border-amber-200 hover:bg-amber-50"}`}>≤60 min</Link>
-            <Link href={buildUrl(params, { categoria: "fiesta" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "fiesta" ? "bg-orange-600 text-white border-orange-600" : "bg-orange-50 text-orange-900 border-orange-200 hover:bg-orange-100"}`}>Fiesta</Link>
-            <Link href={buildUrl(params, { categoria: "familiar" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "familiar" ? "bg-amber-600 text-white border-amber-600" : "bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100"}`}>Familiar</Link>
-            <Link href={buildUrl(params, { categoria: "estrategia" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "estrategia" ? "bg-teal-700 text-white border-teal-700" : "bg-teal-50 text-teal-900 border-teal-200 hover:bg-teal-100"}`}>Estrategia</Link>
-            <Link href={buildUrl(params, { categoria: "cooperativo" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cooperativo" ? "bg-emerald-700 text-white border-emerald-700" : "bg-emerald-50 text-emerald-900 border-emerald-200 hover:bg-emerald-100"}`}>Cooperativo</Link>
-            <Link href={buildUrl(params, { categoria: "cartas" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cartas" ? "bg-violet-700 text-white border-violet-700" : "bg-violet-50 text-violet-900 border-violet-200 hover:bg-violet-100"}`}>Cartas</Link>
-            {hasFilters && (
-              <Link href="/" className="ml-auto text-xs font-black bg-stone-100 text-stone-700 px-4 py-2 rounded-full hover:bg-stone-200 border border-stone-200">✕ Limpiar</Link>
-            )}
+        <div className="bg-white border-2 border-amber-100 rounded-2xl p-5 shadow-sm">
+          <h2 className="text-sm font-black tracking-wide uppercase text-stone-900">¿Qué estás buscando?</h2>
+          <div className="mt-3">
+            <p className="text-xs font-bold tracking-wide uppercase text-stone-500 mb-2">¿Con quién vas a jugar?</p>
+            <div className="flex flex-wrap gap-2 text-sm font-bold">
+              <Link href={buildUrl(params, { jugadores: "2" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 2 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>2</Link>
+              <Link href={buildUrl(params, { jugadores: "4" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 4 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>3–4</Link>
+              <Link href={buildUrl(params, { jugadores: "6" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 6 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>5–6</Link>
+              <Link href={buildUrl(params, { jugadores: "7" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 7 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>7+</Link>
+              {hasFilters && (
+                <Link href="/" className="ml-auto text-xs font-black bg-stone-100 text-stone-700 px-4 py-2 rounded-full hover:bg-stone-200 border border-stone-200">✕ Limpiar</Link>
+              )}
+            </div>
           </div>
+          <div className="mt-4">
+            <p className="text-xs font-bold tracking-wide uppercase text-stone-500 mb-2">¿Qué buscas?</p>
+            <div className="flex flex-wrap gap-2 text-sm font-bold">
+              <Link href={buildUrl(params, { duracion: "30" })} className={`px-4 py-2 rounded-full border-2 transition ${duracion === 30 ? "bg-amber-600 text-white border-amber-600" : "bg-white border-amber-200 hover:bg-amber-50"}`}>≤30 min</Link>
+              <Link href={buildUrl(params, { duracion: "60" })} className={`px-4 py-2 rounded-full border-2 transition ${duracion === 60 ? "bg-amber-600 text-white border-amber-600" : "bg-white border-amber-200 hover:bg-amber-50"}`}>≤60 min</Link>
+              <Link href={buildUrl(params, { categoria: "fiesta" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "fiesta" ? "bg-orange-600 text-white border-orange-600" : "bg-orange-50 text-orange-900 border-orange-200 hover:bg-orange-100"}`}>Fiesta</Link>
+              <Link href={buildUrl(params, { categoria: "familiar" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "familiar" ? "bg-amber-600 text-white border-amber-600" : "bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100"}`}>Familiar</Link>
+              <Link href={buildUrl(params, { categoria: "estrategia" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "estrategia" ? "bg-teal-700 text-white border-teal-700" : "bg-teal-50 text-teal-900 border-teal-200 hover:bg-teal-100"}`}>Estrategia</Link>
+              <Link href={buildUrl(params, { categoria: "cooperativo" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cooperativo" ? "bg-emerald-700 text-white border-emerald-700" : "bg-emerald-50 text-emerald-900 border-emerald-200 hover:bg-emerald-100"}`}>Cooperativo</Link>
+              <Link href={buildUrl(params, { categoria: "cartas" })} className={`px-4 py-2 rounded-full border-2 transition ${categoria === "cartas" ? "bg-violet-700 text-white border-violet-700" : "bg-violet-50 text-violet-900 border-violet-200 hover:bg-violet-100"}`}>Cartas</Link>
+            </div>
+          </div>
+          <form action="/" method="get" className="mt-4 flex gap-2">
+            <input name="q" defaultValue={params.q || ""} placeholder="🔍 Buscar Catan, Azul, Wingspan..." className="flex-1 px-4 py-2.5 rounded-xl border-2 border-amber-200 focus:border-amber-400 focus:outline-none text-sm font-medium" />
+            <button type="submit" className="px-5 py-2.5 rounded-xl bg-stone-900 text-amber-50 text-sm font-black hover:bg-stone-800">Buscar</button>
+            {params.q && <a href="/#comparativa" className="px-4 py-2.5 rounded-xl bg-white border-2 border-stone-200 text-sm font-bold hover:bg-stone-50">✕</a>}
+          </form>
           <div className="flex flex-wrap gap-2 mt-3 text-xs">
             <Link href="/mejores-2-jugadores" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Ranking 2 jugadores →</Link>
             <span className="text-stone-300">·</span>
