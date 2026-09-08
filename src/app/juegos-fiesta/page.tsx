@@ -31,7 +31,7 @@ export default function JuegosFiesta() {
       <article className="max-w-6xl mx-auto px-6 py-10 w-full">
         <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wide uppercase bg-orange-600 text-white px-3 py-1.5 rounded-full mb-4 shadow-sm"><span className="w-1.5 h-1.5 bg-white rounded-full inline-block mr-1.5 align-middle"></span>Fiesta 6+ • Actualizado Sep 2026</div>
         <h1 className="text-4xl font-black tracking-tight leading-none text-stone-900 max-w-3xl">Mejores juegos de mesa para fiestas 6+ jugadores</h1>
-        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para cuando sois 6-12 y nadie quiere leer reglas 20 min. Todos 15-40 min, se explican en 2 min y funcionan con no jugones. Incluye novedad Concept 4-12 sin palabras. Ordenados por max jugadores.</p>
+        <p className="mt-4 text-lg leading-7 text-stone-600 max-w-2xl font-medium">Para cuando sois 6-12 y nadie quiere leer reglas 20 min. Reglas accesibles y partidas de 15–40 min. Incluye novedad Concept 4-12 sin palabras. Ordenados por max jugadores.</p>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {fiesta.map((g) => (
             <GameCard key={g.slug} game={g} />

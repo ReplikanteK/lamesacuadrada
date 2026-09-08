@@ -344,7 +344,7 @@ export const gameDetails: Record<string, GameDetail> = {
   },
   sagrada: {
     intro: "Vitral Gaudí con dados translúcidos: sudoku de color y número.",
-    description: "Sagrada (Daryl Andrews/Adrian Adamescu 2017, Devir) es draft dados 1-4: tiras dados por ronda, eliges 1 en orden serpentina y lo colocas en tu vitral 4x5 respetando patrón (tira dados + restricciones fila/columna de color y número). Herramientas gastan favores para romper regla. 4 rondas de 90 dados, objetivos públicos/privados. Solo incluido, 30-45 min, 14+ (8+ real), 1.9/5, BGG 7.5 30K. No es Azul azulejos: aquí es dado + sudoku.",
+    description: "Sagrada (Daryl Andrews/Adrian Adamescu 2017, Devir) es draft dados 1-4: tiras dados por ronda, eliges 1 en orden serpentina y lo colocas en tu vitral 4x5 respetando patrón (tira dados + restricciones fila/columna de color y número). Herramientas gastan favores para romper regla. 4 rondas de 90 dados, objetivos públicos/privados. Solo incluido, 30-45 min, 14+, 1.9/5, BGG 7.5 30K. No es Azul azulejos: aquí es dado + sudoku.",
     howToPlay: ["Tira tantos dados como jugadores×2+1 y elige 1 por turno en orden serpentina", "Coloca dado en vitral respetando restricción de casilla + nunca igual color/número adyacente ortogonal", "Puntúa objetivos públicos + privado color + favores sobrantes - huecos; más puntos gana"],
     idealFor: ["Pareja/familiar 1-4 que ama puzzle bonito 30 min", "Fans de Azul que quieren dados en vez de fábrica", "Solo relajado"],
     notIdealFor: ["Quien odia azar de dados"],
@@ -354,7 +354,7 @@ export const gameDetails: Record<string, GameDetail> = {
   },
   ciudadelas: {
     intro: "8 personajes, 1 se roba, 1 se asesina. Construye 8 distritos antes que nadie.",
-    description: "Ciudadelas (Bruno Faidutti 2000, Asmodee 2016) es draft roles 2-7: cada ronda eliges en secreto 1 de 8 personajes (asesino roba, ladrón roba, rey corona...), llamas en orden y activas poder; luego construyes 1 distrito pagando oro. 68 distritos 5 colores, primero a 8 cierra y puntúa colores + primer cierre. 45 min, 10+, 2.0/5, BGG 7.2 56K. No es Concept: aquí es bluff + economía + orden.",
+    description: "Ciudadelas (Bruno Faidutti 2000, Asmodee 2016) es draft roles 2-8: cada ronda eliges en secreto 1 de 8 personajes (asesino roba, ladrón roba, rey corona...), llamas en orden y activas poder; luego construyes 1 distrito pagando oro. 68 distritos 5 colores, primero a 8 cierra y puntúa colores + primer cierre. 45 min, 10+, 2.0/5, BGG 7.2 56K. No es Concept: aquí es bluff + economía + orden.",
     howToPlay: ["Elige en secreto 1 personaje de 8 (orden 1-8) y pasa resto", "Rey llama 1→8: si eres tú activas poder (asesino mata 1, ladrón roba a otro, comerciante +1 oro...)", "Cobra oro (2 o distrito), construye 1 distrito pagando; 8 distritos cierra ronda final"],
     idealFor: ["Grupo 4-7 que ama bluff roles 45 min", "Fiesta 5-7 sin equipos", "Familiar 10+ que quiere interacción directa"],
     notIdealFor: ["Pareja (a 2 flojo, mejor 4-5)"],

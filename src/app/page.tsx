@@ -115,7 +115,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             <span className="text-stone-700 mr-1">Filtros:</span>
             <Link href={buildUrl(params, { jugadores: "2" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 2 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>◐ 2 jugadores</Link>
             <Link href={buildUrl(params, { jugadores: "4" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 4 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>4 jugadores</Link>
-            <Link href={buildUrl(params, { jugadores: "6" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 6 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>6+</Link>
+            <Link href={buildUrl(params, { jugadores: "6" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 6 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>6+ jugadores</Link>
             <span className="w-px h-6 bg-amber-200 mx-1 hidden sm:block" />
             <Link href={buildUrl(params, { duracion: "30" })} className={`px-4 py-2 rounded-full border-2 transition ${duracion === 30 ? "bg-amber-600 text-white border-amber-600" : "bg-white border-amber-200 hover:bg-amber-50"}`}>≤30 min</Link>
             <Link href={buildUrl(params, { duracion: "60" })} className={`px-4 py-2 rounded-full border-2 transition ${duracion === 60 ? "bg-amber-600 text-white border-amber-600" : "bg-white border-amber-200 hover:bg-amber-50"}`}>≤60 min</Link>
