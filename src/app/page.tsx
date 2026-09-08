@@ -188,9 +188,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
       <section id="guias" className="max-w-6xl mx-auto px-6 w-full">
         <div className="grid sm:grid-cols-3 gap-4">
           {[
-            { title: "Catan vs Ticket to Ride", desc: "Duelo de clásicos familiares", slug: "/catan-vs-ticket-to-ride", badge: "¡Nuevo!" },
-            { title: "Mejores para 2 jugadores", desc: "Ranking pareja 2026", slug: "/mejores-2-jugadores", badge: "¡Nuevo!" },
-            { title: "Juegos fiesta 6+ personas", desc: "Para grupos grandes", slug: "/juegos-fiesta", badge: "¡Nuevo!" },
+            { title: "Catan vs Ticket to Ride", desc: "Duelo de clásicos familiares", slug: "/catan-vs-ticket-to-ride", badge: "" },
+            { title: "Mejores para 2 jugadores", desc: "Ranking pareja 2026", slug: "/mejores-2-jugadores", badge: "" },
+            { title: "Juegos fiesta 6+ personas", desc: "Para grupos grandes", slug: "/juegos-fiesta", badge: "" },
           ].map((c) => {
             const isLive = true;
             return (
@@ -199,7 +199,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
                 href={c.slug}
                 className="bg-white border-2 rounded-2xl p-5 shadow-sm block hover:shadow-md hover:border-amber-300 border-amber-100 transition"
               >
-                <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-amber-600 text-white">{c.badge}</span>
+                {c.badge ? <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-amber-600 text-white">{c.badge}</span> : null}
                 <div className="font-black mt-3 text-stone-900">{c.title} →</div>
                 <div className="text-sm font-medium text-stone-600">{c.desc}</div>
                 <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
@@ -209,9 +209,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         </div>
         <div className="grid sm:grid-cols-3 gap-4 mt-4">
           {[
-            { title: "Mejores familiares", desc: "Para toda la familia 8+", slug: "/mejores-familiares", badge: "¡Nuevo!" },
-            { title: "Azul vs Splendor", desc: "Duelo abstractos elegantes", slug: "/azul-vs-splendor", badge: "¡Nuevo!" },
-            { title: "Mejores baratos <25€", desc: "12 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "¡Nuevo!" },
+            { title: "Mejores familiares", desc: "Para toda la familia 8+", slug: "/mejores-familiares", badge: "" },
+            { title: "Azul vs Splendor", desc: "Duelo abstractos elegantes", slug: "/azul-vs-splendor", badge: "" },
+            { title: "Mejores baratos <25€", desc: "12 joyas que no parecen baratas", slug: "/mejores-baratos", badge: "" },
             { title: "Mejores para niños 6+", desc: "6-8+ sin aburrir al adulto", slug: "/mejores-ninos", badge: "¡Nuevo!" },
             { title: "Cooperativos Top", desc: "Todos vs el juego — 6 títulos", slug: "/juegos-cooperativos", badge: "¡Nuevo!" },
             { title: "Mejores de cartas", desc: "Draft, bazas y combos — 14", slug: "/mejores-cartas", badge: "¡Nuevo!" },
@@ -223,7 +223,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
                 href={c.slug}
                 className="bg-white border-2 rounded-2xl p-5 shadow-sm block hover:shadow-md hover:border-amber-300 border-amber-100 transition"
               >
-                <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-emerald-600 text-white">{c.badge}</span>
+                {c.badge ? <span className="text-xs font-black tracking-wide px-2.5 py-1 rounded-full bg-emerald-600 text-white">{c.badge}</span> : null}
                 <div className="font-black mt-3 text-stone-900">{c.title} →</div>
                 <div className="text-sm font-medium text-stone-600">{c.desc}</div>
                 <div className="text-xs font-mono text-stone-400 mt-2">{c.slug}</div>
