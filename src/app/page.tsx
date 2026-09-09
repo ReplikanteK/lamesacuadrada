@@ -115,6 +115,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
           <div className="mt-3">
             <p className="text-xs font-bold tracking-wide uppercase text-stone-500 mb-2">¿Con quién vas a jugar?</p>
             <div className="flex flex-wrap gap-2 text-sm font-bold">
+              <Link href={buildUrl(params, { jugadores: "1" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 1 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>Solo · 1</Link>
               <Link href={buildUrl(params, { jugadores: "2" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 2 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>2</Link>
               <Link href={buildUrl(params, { jugadores: "4" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 4 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>3–4</Link>
               <Link href={buildUrl(params, { jugadores: "6" })} className={`px-4 py-2 rounded-full border-2 transition ${jugadores === 6 ? "bg-stone-900 text-amber-50 border-stone-900" : "bg-white border-amber-200 hover:bg-amber-50"}`}>5–6</Link>
@@ -142,6 +143,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             {params.q && <a href="/#comparativa" className="shrink-0 px-4 py-2.5 rounded-xl bg-white border-2 border-stone-200 text-sm font-bold hover:bg-stone-50">✕</a>}
           </form>
           <div className="flex flex-wrap gap-2 mt-3 text-xs">
+            <Link href="/mejores-1-jugador" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Solo 1 jugador →</Link>
+            <span className="text-stone-300">·</span>
             <Link href="/mejores-2-jugadores" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Ranking 2 jugadores →</Link>
             <span className="text-stone-300">·</span>
             <Link href="/catan-vs-ticket-to-ride" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Catan vs TTR →</Link>
@@ -229,6 +232,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             { title: "Mejores para niños 6+", desc: "6-8+ sin aburrir al adulto", slug: "/mejores-ninos", badge: "¡Nuevo!" },
             { title: "Cooperativos Top", desc: "Todos vs el juego — 7 títulos", slug: "/juegos-cooperativos", badge: "¡Nuevo!" },
             { title: "Mejores de cartas", desc: "Draft, bazas y combos — 12", slug: "/mejores-cartas", badge: "¡Nuevo!" },
+            { title: "Mejores para 1 jugador", desc: "Modo solitario real — 8 títulos", slug: "/mejores-1-jugador", badge: "¡Nuevo!" },
           ].map((c) => {
             const isLive = true;
             return isLive ? (

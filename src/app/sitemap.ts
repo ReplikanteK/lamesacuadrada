@@ -4,7 +4,7 @@ import { games } from "@/data/games";
 // Fecha real de última revisión editorial — no "now" artificial.
 // Actualizar solo cuando haya cambio de contenido/precio/metodología.
 // Evita que cada deploy marque todo como modificado.
-const LAST_MOD = new Date("2026-09-08T19:00:00.000Z");
+const LAST_MOD = new Date("2026-09-09T12:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://lamesacuadrada.vercel.app";
@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/metodologia",
     "/catan-vs-ticket-to-ride",
+    "/mejores-1-jugador",
     "/mejores-2-jugadores",
     "/juegos-fiesta",
     "/mejores-familiares",
