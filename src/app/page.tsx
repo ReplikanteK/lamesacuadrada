@@ -143,6 +143,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             {params.q && <a href="/#comparativa" className="shrink-0 px-4 py-2.5 rounded-xl bg-white border-2 border-stone-200 text-sm font-bold hover:bg-stone-50">✕</a>}
           </form>
           <div className="flex flex-wrap gap-2 mt-3 text-xs">
+            <Link href="/mejores-estrategia" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Estrategia →</Link>
+            <span className="text-stone-300">·</span>
             <Link href="/mejores-1-jugador" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Solo 1 jugador →</Link>
             <span className="text-stone-300">·</span>
             <Link href="/mejores-2-jugadores" className="text-amber-700 font-bold underline underline-offset-4 hover:text-amber-800">Ranking 2 jugadores →</Link>
@@ -233,6 +235,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
             { title: "Cooperativos Top", desc: "Todos vs el juego — 7 títulos", slug: "/juegos-cooperativos", badge: "¡Nuevo!" },
             { title: "Mejores de cartas", desc: "Draft, bazas y combos — 12", slug: "/mejores-cartas", badge: "¡Nuevo!" },
             { title: "Mejores para 1 jugador", desc: "Modo solitario real — 8 títulos", slug: "/mejores-1-jugador", badge: "¡Nuevo!" },
+            { title: "Mejores de estrategia", desc: "Euro ligero a duro — 22 títulos", slug: "/mejores-estrategia", badge: "¡Nuevo!" },
           ].map((c) => {
             const isLive = true;
             return isLive ? (

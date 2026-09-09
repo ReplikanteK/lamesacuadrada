@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mejores-ninos",
     "/juegos-cooperativos",
     "/mejores-cartas",
+    "/mejores-estrategia",
     ...games.map((g) => `/juegos/${g.slug}`),
   ];
   return pages.map((p) => ({
